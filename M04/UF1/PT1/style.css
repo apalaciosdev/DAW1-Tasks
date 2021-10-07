@@ -1,0 +1,49 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+  margin-top: 30px;
+}
+
+.m14{
+  background-color: #E4CA6D;
+}
+
+.m01{
+  background-color: #8D8C7E;
+}
+
+.tutoria{
+  background-color: #7B9AC1;
+}
+
+.m10_11{
+  background-color: #CDFD89;
+}
+
+.m03{
+  background-color: #D9F971;
+}
+
+.m02{
+  background-color: #8FCACE;
+}
+
+.m04{
+  background-color: #FEA3CA;
+}
+
+.m08{
+  background-color: #F9BED1;
+}
+
+.m05{
+  background-color: #C088E0;
+}
+
+table{
+  border-collapse:collapse; border: none;
+}
+th, td{
+  border: 1px solid black;
