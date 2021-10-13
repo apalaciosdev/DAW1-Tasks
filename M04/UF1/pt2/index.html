@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <form action="procesar-datos.php" method="post"> <!--En este caso uso POST para mayor seguridad al enviar datos como TLF, email, dirección, etc...-->
+
+    <fieldset>
+      <legend>Datos del usuario</legend>
+
+      <label for="nombre">Nombre</label><br>
+      <input type="text" id="nombre" name="nombre" required autofocus><br><br>
+
+      <label for="apellidos">Apellidos</label><br>
+      <input type="text" id="apellidos" name="apellidos" required autofocus><br><br>
+
+      <label for="nif">NIF</label><br>
+      <input type="text" id="nif" name="nif" required autofocus><br><br>
+
+      <label for="fecha-nacimiento">Fecha de nacimiento</label><br>
+      <input type="date" id="fecha-nacimiento" value="2019-01-01" name="fecha-nacimiento" autofocus><br><br>
+
+      <label for="sexo">Sexo</label><br>
+      <select name="sexo" id="sexo">
+        <option value="Hombre">Hombre</option>
+        <option value="Mujer">Mujer</option>
+        <option value="helicoptero-apache">Helicóptero Apache</option>
+        <option value="no-binario">No bianrio</option>
+      </select><br><br>
+
+      <label for="direccion">Dirección</label><br>
+      <input type="text" id="direccion" name="direccion" autofocus><br><br>
+
+      <label for="cp">CP</label><br>     <!--Patern-->
+      <input type="number" id="cp" name="cp" pattern="[0-9]{5}" autofocus><br><br>
+
+      <label for="telefono">Teléfono</label><br>
+      <input type="text" id="telefono" name="telefono" autofocus><br><br>
+
+      <label for="email">Email</label><br>
+      <input type="text" id="email" name="email" placeholder="usuario@email.com" autofocus><br><br>
+
+      <label for="web">Dirección Web</label><br>
+      <input type="text" id="web" name="web" placeholder="www.google.es" autofocus><br><br>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Datos de la inscripción</legend>
+      <!--Hacer desplegable con mas de una opcion-->
+      <label for="inscripcion">¿En que te quieres inscribir?</label><br>
+      <select name="inscripcion[]" id="inscripcion" multiple>
+        <option value="php">Desarrollo de Aplicaciones Web en PHP</option>
+        <option value="docker">Docker: La gran solución</option>
+        <option value="xml">XML: Trabajar con XML</option>
+        <option value="kotlin">KOTLIN: Desarrollo Android</option>
+        <option value="azure">AZURE</option>
+        <option value="json-vs-yaml">JSON vs YAML</option>
+        <option value="laravel">LARAVEL: Framework de PHP</option>
+        <option value="apache-vs-nginx">APACHE vs NGINX</option>
+        <option value="ORACLE-vs-SQL SERVER">ORCACLE vs SQL SERVER</option>
+        <option value="poo">Programación Orientada a Objetos (POO)</option>
+        <option value="microsoft-net">Microsoft .NET</option>
+        <option value="my-sql">MySQL</option>
+        <option value="pythob">Python: El lenguaje de IoT</option>
+        <option value="html5-css3">HTML5 y CSS3</option>
+        <option value="java">Programación en Java</option>
+      </select><br><br>
+
+
+      <p>¿Qué lenguajes sabes?</p>
+      <input type="checkbox" name="python" id="python">
+      <label for="python">Python</label>
+
+      <input type="checkbox" name="javascript" id="javascript">
+      <label for="javascript">JavaScript</label>
+
+      <input type="checkbox" name="php" id="php">
+      <label for="php">PHP</label>
+
+      <input type="checkbox" name="c#" id="c#">
+      <label for="c#">C#</label>
+
+      <input type="checkbox" name="java" id="java">
+      <label for="java">Java</label><br><br><br><br>
+
+      <table>
+        <colgroup>
+          <!--Este funciona para seleccionar las columas. 
+          EJEMPLO
+          <col span="2" style="background-color:red">
+          <col style="background-color:yellow">       -->
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Hora</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miercoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>15:00 - 17:00</td>
+            <td>Desarrollo de aplicaciones Web en PHP</td>
+            <td>KOTLIN: Desarrolo Android</td>
+            <td>LARAVEL: Framework de PHP</td>
+            <td>Programación Orientada a Objetos (POO)</td>
+            <td>Python: El lenguaje de IoT</td>
+          </tr>
+          <tr>
+            <td>17:00 - 19:00</td>
+            <td>Docker: La gran solución</td>
+            <td>AZURE</td>
+            <td>APACHE vs NGINX</td>
+            <td>Microsoft .NET</td>
+            <td>HTML5 y CSS3</td>
+          </tr>
+          <tr>
+            <td>19:00 - 21:00</td>
+            <td>XML: Trabajar con XML</td>
+            <td>JSON vs YAML</td>
+            <td>ORCACLE vs SQL SERVER</td>
+            <td>MySQL</td>
+            <td>Programación en Java</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Hora</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miercoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+          </tr>
+        </tfoot>
+      </table>
+    </fieldset>
+    <button type="submit"><img src="plane-paper.png" alt="Enviar"></button>
+  </form>
+
+
+</body>
+
+</html>
