@@ -1,5 +1,6 @@
 *{
   font-family: Arial, Helvetica, sans-serif;
+  margin-left: 30px;
 }
 
 h2{
@@ -44,6 +45,14 @@ h2{
 
 table{
   border-collapse:collapse; border: none;
+  text-align: center;
+  width: 70%;
 }
+
 th, td{
   border: 1px solid black;
+}
+
+.patio{
+  text-align: center;
+}
