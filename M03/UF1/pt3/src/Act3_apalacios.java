@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.Calendar;
 import java.lang.Math;
 
-public class Ex1 {
+public class Act3_apalacios {
     public static void main(String[] args) throws Exception {
         
         /* ------- EJERCICIO 1 ------- */ System.out.println("----- EJERCICIO 1 -----");
