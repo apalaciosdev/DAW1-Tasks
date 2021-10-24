@@ -1,8 +1,6 @@
 import java.util.Scanner;
 import java.util.Calendar;
 import java.util.ArrayList;
-import java.lang.Math;
-
 
 public class Act4_apalacios {
     public static void main(String[] args) throws Exception {
@@ -17,281 +15,284 @@ public class Act4_apalacios {
         System.out.println("Introduce la velocidad máxima del tramo:");
         int limiteEj1 = teclado.nextInt();
 
+        while(true){
+
+            if(limiteEj1 == 30){
+                if(velocidadEj1 > 30 && velocidadEj1 <=50){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 100€ sin retirada de puntos.");
+                }
+    
+                else if(velocidadEj1 > 50 && velocidadEj1 <=60){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 300€ con retirada de 2 puntos.");
+                }
+    
+                else if(velocidadEj1 > 60 && velocidadEj1 <=70){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 400€ con retirada de 4 puntos.");
+                }
+    
+                else if(velocidadEj1 > 70 && velocidadEj1 <=80){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 500€ con retirada de 6 puntos.");
+                }
+    
+                else if(velocidadEj1 > 80){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 600€ con retirada de 6 puntos.");
+                }
+    
+                else{
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, no habrá sanción ya que no se han excedido los límites de velocidad.");
+                }
+                break;
+            }
+    
+            else if(limiteEj1 == 40){
+                if(velocidadEj1 > 40 && velocidadEj1 <=60){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 100€ sin retirada de puntos.");
+                }
+    
+                else if(velocidadEj1 > 60 && velocidadEj1 <=70){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 300€ con retirada de 2 puntos.");
+                }
+    
+                else if(velocidadEj1 > 70 && velocidadEj1 <=80){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 400€ con retirada de 4 puntos.");
+                }
+    
+                else if(velocidadEj1 > 80 && velocidadEj1 <=90){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 500€ con retirada de 6 puntos.");
+                }
+    
+                else if(velocidadEj1 > 90){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 600€ con retirada de 6 puntos.");
+                }
+    
+                else{
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, no habrá sanción ya que no se han excedido los límites de velocidad.");
+                }
+                break;
+            }
+    
+            else if(limiteEj1 == 50){
+                if(velocidadEj1 > 50 && velocidadEj1 <=70){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 100€ sin retirada de puntos.");
+                }
+    
+                else if(velocidadEj1 > 70 && velocidadEj1 <=80){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 300€ con retirada de 2 puntos.");
+                }
+    
+                else if(velocidadEj1 > 80 && velocidadEj1 <=90){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 400€ con retirada de 4 puntos.");
+                }
+    
+                else if(velocidadEj1 > 90 && velocidadEj1 <=100){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 500€ con retirada de 6 puntos.");
+                }
+    
+                else if(velocidadEj1 > 100){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 600€ con retirada de 6 puntos.");
+                }
+    
+                else{
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, no habrá sanción ya que no se han excedido los límites de velocidad.");
+                }
+                break;
+            }
+    
+            else if(limiteEj1 == 60){
+                if(velocidadEj1 > 60 && velocidadEj1 <=90){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 100€ sin retirada de puntos.");
+                }
+    
+                else if(velocidadEj1 > 90 && velocidadEj1 <=100){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 300€ con retirada de 2 puntos.");
+                }
+    
+                else if(velocidadEj1 > 110 && velocidadEj1 <=120){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 400€ con retirada de 4 puntos.");
+                }
+    
+                else if(velocidadEj1 > 120 && velocidadEj1 <=130){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 500€ con retirada de 6 puntos.");
+                }
+    
+                else if(velocidadEj1 > 130){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 600€ con retirada de 6 puntos.");
+                }
+    
+                else{
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, no habrá sanción ya que no se han excedido los límites de velocidad.");
+                }
+                break;
+            }
+    
+            else if(limiteEj1 == 70){
+                if(velocidadEj1 > 70 && velocidadEj1 <=100){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 100€ sin retirada de puntos.");
+                }
+    
+                else if(velocidadEj1 > 100 && velocidadEj1 <=120){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 300€ con retirada de 2 puntos.");
+                }
+    
+                else if(velocidadEj1 > 120 && velocidadEj1 <=130){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 400€ con retirada de 4 puntos.");
+                }
+    
+                else if(velocidadEj1 > 130 && velocidadEj1 <=140){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 500€ con retirada de 6 puntos.");
+                }
+    
+                else if(velocidadEj1 > 140){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 600€ con retirada de 6 puntos.");
+                }
+    
+                else{
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, no habrá sanción ya que no se han excedido los límites de velocidad.");
+                }
+                break;
+            }
+    
+            else if(limiteEj1 == 80){
+                if(velocidadEj1 > 80 && velocidadEj1 <=110){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 100€ sin retirada de puntos.");
+                }
+    
+                else if(velocidadEj1 > 110 && velocidadEj1 <=130){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 300€ con retirada de 2 puntos.");
+                }
+    
+                else if(velocidadEj1 > 130 && velocidadEj1 <=140){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 400€ con retirada de 4 puntos.");
+                }
+    
+                else if(velocidadEj1 > 140 && velocidadEj1 <=150){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 500€ con retirada de 6 puntos.");
+                }
+    
+                else if(velocidadEj1 > 150){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 600€ con retirada de 6 puntos.");
+                }
+    
+                else{
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, no habrá sanción ya que no se han excedido los límites de velocidad.");
+                }
+                break;
+            }
+    
+            else if(limiteEj1 == 90){
+                if(velocidadEj1 > 90 && velocidadEj1 <=120){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 100€ sin retirada de puntos.");
+                }
+    
+                else if(velocidadEj1 > 120 && velocidadEj1 <=140){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 300€ con retirada de 2 puntos.");
+                }
+    
+                else if(velocidadEj1 > 140 && velocidadEj1 <=150){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 400€ con retirada de 4 puntos.");
+                }
+    
+                else if(velocidadEj1 > 150 && velocidadEj1 <=160){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 500€ con retirada de 6 puntos.");
+                }
+    
+                else if(velocidadEj1 > 160){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 600€ con retirada de 6 puntos.");
+                }
+    
+                else{
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, no habrá sanción ya que no se han excedido los límites de velocidad.");
+                }
+                break;
+            }
+    
+            else if(limiteEj1 == 100){
+                if(velocidadEj1 > 100 && velocidadEj1 <=130){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 100€ sin retirada de puntos.");
+                }
+    
+                else if(velocidadEj1 > 130 && velocidadEj1 <=150){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 300€ con retirada de 2 puntos.");
+                }
+    
+                else if(velocidadEj1 > 150 && velocidadEj1 <=160){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 400€ con retirada de 4 puntos.");
+                }
+    
+                else if(velocidadEj1 > 160 && velocidadEj1 <=170){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 500€ con retirada de 6 puntos.");
+                }
+    
+                else if(velocidadEj1 > 170){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 600€ con retirada de 6 puntos.");
+                }
+    
+                else{
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, no habrá sanción ya que no se han excedido los límites de velocidad.");
+                }
+                break;
+            }
+    
+            else if(limiteEj1 == 110){
+                if(velocidadEj1 > 110 && velocidadEj1 <=140){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 100€ sin retirada de puntos.");
+                }
+    
+                else if(velocidadEj1 > 140 && velocidadEj1 <=160){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 300€ con retirada de 2 puntos.");
+                }
+    
+                else if(velocidadEj1 > 160 && velocidadEj1 <=170){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 400€ con retirada de 4 puntos.");
+                }
+    
+                else if(velocidadEj1 > 170 && velocidadEj1 <=180){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 500€ con retirada de 6 puntos.");
+                }
+    
+                else if(velocidadEj1 > 180){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 600€ con retirada de 6 puntos.");
+                }
+    
+                else{
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, no habrá sanción ya que no se han excedido los límites de velocidad.");
+                }
+                break;
+            }
+    
+            else if(limiteEj1 == 120){
+                if(velocidadEj1 > 120 && velocidadEj1 <=150){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 100€ sin retirada de puntos.");
+                }
+    
+                else if(velocidadEj1 > 150 && velocidadEj1 <=170){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 300€ con retirada de 2 puntos.");
+                }
+    
+                else if(velocidadEj1 > 170 && velocidadEj1 <=180){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 400€ con retirada de 4 puntos.");
+                }
+    
+                else if(velocidadEj1 > 180 && velocidadEj1 <=190){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 500€ con retirada de 6 puntos.");
+                }
+    
+                else if(velocidadEj1 > 190){
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción será de 600€ con retirada de 6 puntos.");
+                }
+    
+                else{
+                    System.out.println("\nConduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, no habrá sanción ya que no se han excedido los límites de velocidad.");
+                }
+                break;
+            }
+    
+            else{
+                System.out.println("\nIntroduce un límite de velocidad que sea válido (30km/h, 40km/h, 50km/h, 60km/h, 70km/h, 80km/h, 90km/h, 100km/h, 110km/h o 120km/h)");
+                limiteEj1 = teclado.nextInt();
+            }
+        }
         
-        if(limiteEj1 == 30){
-            if(velocidadEj1 > 30 && velocidadEj1 <=50){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 100€ sin retirada de puntos.");
-            }
-
-            else if(velocidadEj1 > 50 && velocidadEj1 <=60){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 300€ con retirada de 2 puntos.");
-            }
-
-            else if(velocidadEj1 > 60 && velocidadEj1 <=70){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 400€ con retirada de 4 puntos.");
-            }
-
-            else if(velocidadEj1 > 70 && velocidadEj1 <=80){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 500€ con retirada de 6 puntos.");
-            }
-
-            else if(velocidadEj1 > 80){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 600€ con retirada de 6 puntos.");
-            }
-
-            else{
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, no habrá sanción ya que no se han excedido los límites de velocidad.");
-            }
-    
-        }
-
-        else if(limiteEj1 == 40){
-            if(velocidadEj1 > 40 && velocidadEj1 <=60){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 100€ sin retirada de puntos.");
-            }
-
-            else if(velocidadEj1 > 60 && velocidadEj1 <=70){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 300€ con retirada de 2 puntos.");
-            }
-
-            else if(velocidadEj1 > 70 && velocidadEj1 <=80){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 400€ con retirada de 4 puntos.");
-            }
-
-            else if(velocidadEj1 > 80 && velocidadEj1 <=90){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 500€ con retirada de 6 puntos.");
-            }
-
-            else if(velocidadEj1 > 90){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 600€ con retirada de 6 puntos.");
-            }
-
-            else{
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, no habrá sanción ya que no se han excedido los límites de velocidad.");
-            }
-    
-        }
-
-        else if(limiteEj1 == 50){
-            if(velocidadEj1 > 50 && velocidadEj1 <=70){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 100€ sin retirada de puntos.");
-            }
-
-            else if(velocidadEj1 > 70 && velocidadEj1 <=80){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 300€ con retirada de 2 puntos.");
-            }
-
-            else if(velocidadEj1 > 80 && velocidadEj1 <=90){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 400€ con retirada de 4 puntos.");
-            }
-
-            else if(velocidadEj1 > 90 && velocidadEj1 <=100){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 500€ con retirada de 6 puntos.");
-            }
-
-            else if(velocidadEj1 > 100){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 600€ con retirada de 6 puntos.");
-            }
-
-            else{
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, no habrá sanción ya que no se han excedido los límites de velocidad.");
-            }
-    
-        }
-
-        else if(limiteEj1 == 60){
-            if(velocidadEj1 > 60 && velocidadEj1 <=90){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 100€ sin retirada de puntos.");
-            }
-
-            else if(velocidadEj1 > 90 && velocidadEj1 <=100){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 300€ con retirada de 2 puntos.");
-            }
-
-            else if(velocidadEj1 > 110 && velocidadEj1 <=120){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 400€ con retirada de 4 puntos.");
-            }
-
-            else if(velocidadEj1 > 120 && velocidadEj1 <=130){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 500€ con retirada de 6 puntos.");
-            }
-
-            else if(velocidadEj1 > 130){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 600€ con retirada de 6 puntos.");
-            }
-
-            else{
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, no habrá sanción ya que no se han excedido los límites de velocidad.");
-            }
-    
-        }
-
-        else if(limiteEj1 == 70){
-            if(velocidadEj1 > 70 && velocidadEj1 <=100){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 100€ sin retirada de puntos.");
-            }
-
-            else if(velocidadEj1 > 100 && velocidadEj1 <=120){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 300€ con retirada de 2 puntos.");
-            }
-
-            else if(velocidadEj1 > 120 && velocidadEj1 <=130){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 400€ con retirada de 4 puntos.");
-            }
-
-            else if(velocidadEj1 > 130 && velocidadEj1 <=140){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 500€ con retirada de 6 puntos.");
-            }
-
-            else if(velocidadEj1 > 140){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 600€ con retirada de 6 puntos.");
-            }
-
-            else{
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, no habrá sanción ya que no se han excedido los límites de velocidad.");
-            }
-    
-        }
-
-        else if(limiteEj1 == 80){
-            if(velocidadEj1 > 80 && velocidadEj1 <=110){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 100€ sin retirada de puntos.");
-            }
-
-            else if(velocidadEj1 > 110 && velocidadEj1 <=130){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 300€ con retirada de 2 puntos.");
-            }
-
-            else if(velocidadEj1 > 130 && velocidadEj1 <=140){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 400€ con retirada de 4 puntos.");
-            }
-
-            else if(velocidadEj1 > 140 && velocidadEj1 <=150){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 500€ con retirada de 6 puntos.");
-            }
-
-            else if(velocidadEj1 > 150){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 600€ con retirada de 6 puntos.");
-            }
-
-            else{
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, no habrá sanción ya que no se han excedido los límites de velocidad.");
-            }
-    
-        }
-
-        else if(limiteEj1 == 90){
-            if(velocidadEj1 > 90 && velocidadEj1 <=120){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 100€ sin retirada de puntos.");
-            }
-
-            else if(velocidadEj1 > 120 && velocidadEj1 <=140){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 300€ con retirada de 2 puntos.");
-            }
-
-            else if(velocidadEj1 > 140 && velocidadEj1 <=150){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 400€ con retirada de 4 puntos.");
-            }
-
-            else if(velocidadEj1 > 150 && velocidadEj1 <=160){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 500€ con retirada de 6 puntos.");
-            }
-
-            else if(velocidadEj1 > 160){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 600€ con retirada de 6 puntos.");
-            }
-
-            else{
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, no habrá sanción ya que no se han excedido los límites de velocidad.");
-            }
-    
-        }
-
-        else if(limiteEj1 == 100){
-            if(velocidadEj1 > 100 && velocidadEj1 <=130){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 100€ sin retirada de puntos.");
-            }
-
-            else if(velocidadEj1 > 130 && velocidadEj1 <=150){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 300€ con retirada de 2 puntos.");
-            }
-
-            else if(velocidadEj1 > 150 && velocidadEj1 <=160){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 400€ con retirada de 4 puntos.");
-            }
-
-            else if(velocidadEj1 > 160 && velocidadEj1 <=170){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 500€ con retirada de 6 puntos.");
-            }
-
-            else if(velocidadEj1 > 170){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 600€ con retirada de 6 puntos.");
-            }
-
-            else{
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, no habrá sanción ya que no se han excedido los límites de velocidad.");
-            }
-    
-        }
-
-        else if(limiteEj1 == 110){
-            if(velocidadEj1 > 110 && velocidadEj1 <=140){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 100€ sin retirada de puntos.");
-            }
-
-            else if(velocidadEj1 > 140 && velocidadEj1 <=160){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 300€ con retirada de 2 puntos.");
-            }
-
-            else if(velocidadEj1 > 160 && velocidadEj1 <=170){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 400€ con retirada de 4 puntos.");
-            }
-
-            else if(velocidadEj1 > 170 && velocidadEj1 <=180){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 500€ con retirada de 6 puntos.");
-            }
-
-            else if(velocidadEj1 > 180){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 600€ con retirada de 6 puntos.");
-            }
-
-            else{
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, no habrá sanción ya que no se han excedido los límites de velocidad.");
-            }
-    
-        }
-
-        else if(limiteEj1 == 120){
-            if(velocidadEj1 > 120 && velocidadEj1 <=150){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 100€ sin retirada de puntos.");
-            }
-
-            else if(velocidadEj1 > 150 && velocidadEj1 <=170){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 300€ con retirada de 2 puntos.");
-            }
-
-            else if(velocidadEj1 > 170 && velocidadEj1 <=180){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 400€ con retirada de 4 puntos.");
-            }
-
-            else if(velocidadEj1 > 180 && velocidadEj1 <=190){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 500€ con retirada de 6 puntos.");
-            }
-
-            else if(velocidadEj1 > 190){
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, la sanción serán de 600€ con retirada de 6 puntos.");
-            }
-
-            else{
-                System.out.println("Conduciendo a " + velocidadEj1 + "km/h en zona máxima de " + limiteEj1 + "km/h, no habrá sanción ya que no se han excedido los límites de velocidad.");
-            }
-    
-        }
-
-        else{
-            System.out.println("Introduce un límite de velocidad que sea válido (30km/h, 40km/h, 50km/h, 60km/h, 70km/h, 80km/h, 90km/h, 100km/h, 110km/h o 120km/h)");
-        }
-
 
 
 
@@ -300,7 +301,7 @@ public class Act4_apalacios {
 
 
         /* ------- EJERCICIO 2 ------- */ System.out.println("\n\n----- EJERCICIO 2 -----");
-        /*
+        
         Calendar calendar = Calendar.getInstance();
         int añoActualEj2 = calendar.get(Calendar.YEAR);
         int cursosRepetidosEj2 = 0;
@@ -328,24 +329,24 @@ public class Act4_apalacios {
         
         if(esoEj2){
             if(!cursoEj2){
-                System.out.println(nombreEj2 + " tiene " + edadEj2 + ", tiene aprovada la ESO, no repitió ninguna vez y acabó en el año " + resultadoEj2);
+                System.out.println("\n" + nombreEj2 + " tiene " + edadEj2 + " años, tiene aprovada la ESO, no repitió ninguna vez y acabó en el año " + resultadoEj2);
             }
 
             else{
-                System.out.println(nombreEj2 + " tiene " + edadEj2 + ", tiene aprovada la ESO, repitió " + cursosRepetidosEj2 + " vez/es y acabó en el año " + resultadoEj2);
+                System.out.println("\n" + nombreEj2 + " tiene " + edadEj2 + " años, tiene aprovada la ESO, repitió " + cursosRepetidosEj2 + " vez/es y acabó en el año " + resultadoEj2);
             }
         }
 
         else{
             if(!cursoEj2){
-                System.out.println(nombreEj2 + " tiene " + edadEj2 + ", no tiene aprovada la ESO y no repitió ninguna vez");
+                System.out.println("\n" + nombreEj2 + " tiene " + edadEj2 + " años, no tiene aprovada la ESO y no repitió ninguna vez");
             }
 
             else{
-                System.out.println(nombreEj2 + " tiene " + edadEj2 + ", no tiene aprovada la ESO y repitió " + cursosRepetidosEj2 + " vez/es");
+                System.out.println("\n" + nombreEj2 + " tiene " + edadEj2 + " años, no tiene aprovada la ESO y repitió " + cursosRepetidosEj2 + " vez/es");
             }
-        }*/
-
+        }
+        
 
 
 
@@ -354,7 +355,7 @@ public class Act4_apalacios {
 
 
         /* ------- EJERCICIO 3 ------- */ System.out.println("\n\n----- EJERCICIO 3 -----");
-        /*
+        
         float cuentaEj3 = 0;
         ArrayList<String> ingredientes = new ArrayList<String>();
         
@@ -411,14 +412,14 @@ public class Act4_apalacios {
             ingredientes.add("Salmón");
         }
 
-        System.out.println("Has pedido una pizza " + tipoPizza + " con los siguientes extras:");
+        System.out.println("\nHas pedido una pizza " + tipoPizza + " con los siguientes extras:");
 
         for (int i = 0; i < ingredientes.size(); i++){
-            System.out.println(ingredientes.get(i));
+            System.out.println("- " + ingredientes.get(i));
         }
 
         System.out.println("Total: " + cuentaEj3 + "€");
-        */
+        
 
 
 
@@ -428,7 +429,7 @@ public class Act4_apalacios {
 
 
         /* ------- EJERCICIO 4 ------- */ System.out.println("\n\n----- EJERCICIO 4 -----");
-        /*
+        
         System.out.println("¿Qué dia de la semana deseas reservar cita?");
         String diaEj4 = teclado.next().toLowerCase();
         
@@ -476,8 +477,8 @@ public class Act4_apalacios {
             }
         }
 
-        System.out.println("Visita concertada el " + diaEj4 + " por la " + turnoEj4 + " para el animal " + animalEj4);
-        */
+        System.out.println("\n" + "Visita concertada el " + diaEj4 + " por la " + turnoEj4 + " para el animal " + animalEj4);
+        
 
 
 
@@ -487,7 +488,7 @@ public class Act4_apalacios {
 
 
         /* ------- EJERCICIO 5 ------- */ System.out.println("\n\n----- EJERCICIO 5 -----");
-        /*
+        
         float descuentoEj5 = 0;
         float precioDiaEj5 = 0;
         String estadoEj5 = "no tiene";
@@ -536,15 +537,8 @@ public class Act4_apalacios {
             precioDiaEj5 = 8;
         }
 
-        System.out.println("El cliente de " + edadEj5 + " años " + estadoEj5 + " abono y su entrada es para el " + diaEj5 + " con precio de " + (precioDiaEj5 - descuentoEj5) + "€");
-        */
-        /* El preu estàndard de dilluns a divendres és de 6€, el dissabte i diumenge val 8€. 
-        Els menors de 8 anys i els majors de 65 anys tenen un descompte de 1,5€ tots els dies.
-        
-        La targeta d'abonat te un descompte de 1€ de dilluns a divendres i 2€ els caps de setmana ,
-        aquest descompte no és acumulable amb el de l'edat i sempre preval el descompte més gran
+        System.out.println("\n" + "El cliente de " + edadEj5 + " años " + estadoEj5 + " abono y su entrada es para el " + diaEj5 + " con precio de " + (precioDiaEj5 - descuentoEj5) + "€");
 
-        El client de 66 anys no té abonament i l'entrada per al dimecres val 4,5€"*/
         
 
 
