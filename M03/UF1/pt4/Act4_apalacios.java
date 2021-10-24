@@ -10,7 +10,7 @@ public class Act4_apalacios {
         /* ------- EJERCICIO 1 ------- */ System.out.println("----- EJERCICIO 1 -----");
         
         Scanner teclado = new Scanner(System.in);
-        /*
+        
         System.out.println("Introduce la velocidad a la que se circulaba:");
         int velocidadEj1 = teclado.nextInt();
 
@@ -290,7 +290,7 @@ public class Act4_apalacios {
 
         else{
             System.out.println("Introduce un límite de velocidad que sea válido (30km/h, 40km/h, 50km/h, 60km/h, 70km/h, 80km/h, 90km/h, 100km/h, 110km/h o 120km/h)");
-        }*/
+        }
 
 
 
@@ -428,7 +428,7 @@ public class Act4_apalacios {
 
 
         /* ------- EJERCICIO 4 ------- */ System.out.println("\n\n----- EJERCICIO 4 -----");
-        
+        /*
         System.out.println("¿Qué dia de la semana deseas reservar cita?");
         String diaEj4 = teclado.next().toLowerCase();
         
@@ -477,66 +477,75 @@ public class Act4_apalacios {
         }
 
         System.out.println("Visita concertada el " + diaEj4 + " por la " + turnoEj4 + " para el animal " + animalEj4);
+        */
 
+
+
+
+
+
+
+
+        /* ------- EJERCICIO 5 ------- */ System.out.println("\n\n----- EJERCICIO 5 -----");
+        /*
+        float descuentoEj5 = 0;
+        float precioDiaEj5 = 0;
+        String estadoEj5 = "no tiene";
         
-
+        System.out.println("¿Qué dia de la semana deseas reservar entrada?");
+        String diaEj5 = teclado.next().toLowerCase();
         
+        System.out.println("Introduce tu edad:");
+        int edadEj5 = teclado.nextInt();
+
+        System.out.println("¿Tienes tarjeta de abono? [true o false]");
+        boolean abonoEj5 = teclado.nextBoolean();
 
 
+        if(abonoEj5 == false && (edadEj5 < 8 || edadEj5 > 65)){
+            descuentoEj5 = 1.5f;
+        }
 
 
+        if(abonoEj5 && (diaEj5.equals("lunes") || diaEj5.equals("martes") || diaEj5.equals("miercoles") || diaEj5.equals("jueves") || diaEj5.equals("viernes"))){
+            if(edadEj5 < 8 || edadEj5 > 65){
+                descuentoEj5 = 1.5f; //Prevalece mayor descuento que es el de edad (1,5€)
+            }
+            else{
+                descuentoEj5 = descuentoEj5 + 1;
+            }
+            estadoEj5 = "tiene";
+        }
 
-       
-    
-    
-    
+        else if(abonoEj5 == true && (diaEj5.equals("sabado") || diaEj5.equals("domingo"))){
+            if(edadEj5 < 8 || edadEj5 > 65){
+                descuentoEj5 = 2; //Prevalece mayor descuento que es el del bono (2€)
+            }
+            else{
+                descuentoEj5 = descuentoEj5 + 2;
+            }
+            estadoEj5 = "tiene";
+        }
+
+
+        if(diaEj5.equals("lunes") || diaEj5.equals("martes") || diaEj5.equals("miercoles") || diaEj5.equals("jueves") || diaEj5.equals("viernes")){
+            precioDiaEj5 = 6;
+        }
         
+        else if(diaEj5.equals("sabado") || diaEj5.equals("domingo")){
+            precioDiaEj5 = 8;
+        }
 
+        System.out.println("El cliente de " + edadEj5 + " años " + estadoEj5 + " abono y su entrada es para el " + diaEj5 + " con precio de " + (precioDiaEj5 - descuentoEj5) + "€");
+        */
+        /* El preu estàndard de dilluns a divendres és de 6€, el dissabte i diumenge val 8€. 
+        Els menors de 8 anys i els majors de 65 anys tenen un descompte de 1,5€ tots els dies.
         
+        La targeta d'abonat te un descompte de 1€ de dilluns a divendres i 2€ els caps de setmana ,
+        aquest descompte no és acumulable amb el de l'edat i sempre preval el descompte més gran
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        El client de 66 anys no té abonament i l'entrada per al dimecres val 4,5€"*/
+        
 
 
         System.out.println("---------------- FIN DEL PROGRAMA ----------------");
