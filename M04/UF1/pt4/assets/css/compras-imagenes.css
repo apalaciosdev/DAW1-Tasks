@@ -1,0 +1,15 @@
+.compras-imagenes{
+  background-color: rgb(211, 211, 211);
+  height: 350px;
+  padding-top: 50px;
+}
+
+.compras-imagenes > h2{
+  color: rgb(37, 37, 37);
+  margin-top: 100px;
+}
+
+.compras-imagenes > img{
+  float: left;
+  width: 50%;
+}

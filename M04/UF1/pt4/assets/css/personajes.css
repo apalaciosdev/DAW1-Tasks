@@ -1,0 +1,19 @@
+.personajes{
+  background-color: rgb(26, 26, 26);
+  padding-top: 100px;
+  height: 70%;
+}
+
+.personaje-individual{
+  
+}
+
+.personaje-individual > img{
+  width: 300px;
+  float: left;
+  
+}
+
+.personaje-individual > p{
+  padding-left: 300px;
+}

@@ -1,0 +1,24 @@
+section{
+  height: 525px;
+}
+
+.venom-header > img{
+
+  z-index: 1;
+  max-width: 100%;
+  height: auto;
+  float: right;
+  margin-top: 70px;
+}
+
+.venom-header > p{
+  position: absolute;
+  margin-top: 260px;
+  color: rgb(201, 201, 201);
+  float: left;
+  z-index: 0;
+  text-align: left;
+  max-width: 50%;
+  margin-left: 100px;
+}
+
