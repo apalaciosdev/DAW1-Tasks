@@ -9,20 +9,6 @@
   text-align: justify;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .relleno-nav{
   height: 100px;
   position: fixed;
@@ -62,20 +48,11 @@ header{
   margin-top: 45px;
 }
 
-#logo_header{
-  position: absolute;
-  border-radius: 10px;
-  height: 40px;
-  border: 3px solid white;
-  margin-top: -35px;
-  margin-left: 8px;
-}
-
 #logo_text{
   position: absolute;
   font-family: Arial, Helvetica, sans-serif;
   color: #333;
-  margin-top: -23px;
+  margin-top: -25px;
   margin-left: 70px;
   font-size: 17px;
 }
@@ -157,24 +134,14 @@ header label:hover{
       margin-top: -38px;
   }
   
-  #logo_header{
-      position: relative;
-      float: right;
-      margin-top: -12px;
-      border-radius: 10px;
-      margin-right: 10px;
-      margin-left: 0px;
-      height: 46px;
-      border: 2px solid white;
-  }
-  
+
   
   #logo_text{
       position: static;
       float: right;
       font-family: Arial, Helvetica, sans-serif;
       color: black;
-      margin-top: 5px;
+      margin-top: 2px;
       margin-right: 10px;
       font-size: 15px;
   }
@@ -233,11 +200,6 @@ header label:hover{
   position: relative;
 }
 
-.desplegable1 > li{
-
-
-}
-
 #navegation_menu li:hover > ul{
   display: block;
 }
@@ -261,7 +223,7 @@ header label:hover{
   color: white;
 }
 
-.legal_mini_menu{
+.mini_menu{
   display: none;
 
 }
@@ -270,7 +232,7 @@ header label:hover{
 
 
 @media(max-width:868px){
-  .legal_mini_menu{
+  .mini_menu{
       display: block;
       margin-left: 30px;
   }

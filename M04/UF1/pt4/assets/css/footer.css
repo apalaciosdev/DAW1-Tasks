@@ -7,16 +7,15 @@ footer{
   width: 100%;
   background-color: #333;
   float: left;
-  margin-top: 100px;
 }
 
-footer>p{
+footer > p{
   color: white;
 }
 
 
 /*Links*/
-footer>p>a{
+footer > p > a{
   text-decoration: none;
   list-style: none;
   color: white;
@@ -46,26 +45,26 @@ footer>p>a{
 }
 
 
-footer>p:nth-child(1){
+footer > p:nth-child(1){
   text-align: center;
   margin-top: 20px;
 }
 
-footer>p>a:nth-child(1):hover{
+footer > p > a:nth-child(1):hover{
   text-decoration-line: underline;
 }
 
-footer>p>a:nth-child(2):hover{
+footer > p > a:nth-child(2):hover{
   text-decoration-line: underline;
 }
 
-footer>p>a:nth-child(3):hover{
+footer > p > a:nth-child(3):hover{
   text-decoration-line: underline;
 }
 
 
 /*Developed by apalacios.dev*/
-footer>p:nth-child(2){   
+footer > p:nth-child(2){   
   text-align: center;
   margin-top: 30px;
 }

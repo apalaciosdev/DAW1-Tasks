@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/venom-header.css">
     <link rel="stylesheet" href="./assets/css/personajes.css">
@@ -20,7 +20,7 @@
   <body>
     <header id="header">
       <input type="checkbox" id="btn-menu">
-      <label for="btn-menu"><img src="src/img/btn-menu.png" alt=""></label>
+      <label for="btn-menu"><img src="./assets/images/btn-menu.png"></label>
 
       <div id="logo">
           <p id="logo_text"><strong> VENOM </strong></p>
@@ -29,21 +29,21 @@
       <nav id="navegation_menu">
           <ul id="botones_navegacion">
               <li><a href="#">Inicio</a></li>
-              <li id="legal_desplegable"><a href="">Personajes</a>
+              <li id="#klyntar"><a href="#personajes-section">Personajes</a>
                   <ul class="desplegable1">
                       <li><a href="#klyntar">Klyntar</a></li>
                       <li><a href="#eddie">Eddie</a></li>
                       <li><a href="#anne">Anne</a></li>
                   </ul></li>
-              <li><a href="view/servicios.html">Comprar</a></li>
-              <li><a href="view/servicios.html">Imágenes</a></li>
-              <li><a href="view/nosotros.html">Review</a></li>
-              <li><a href="view/contacto.html">Links</a></li>
-              <li><a href="view/contacto.html">+ info</a></li>
-              <li class="legal_mini_menu"><b><a href="#klyntar">Personajes</a></b></li>
-              <li class="legal_mini_menu"><a href="#klyntar">Klyntar</a></li>
-              <li class="legal_mini_menu"><a href="#eddie">Eddie</a></li>
-              <li class="legal_mini_menu"><a href="#anne">Anne</a></li>
+              <li><a href="#compras-section">Comprar</a></li>
+              <li><a href="#imagenes-section">Imágenes</a></li>
+              <li><a href="#review-section">Review</a></li>
+              <li><a href="#links-section">Links</a></li>
+              <li><a href="#footer">+ info</a></li>
+              <li class="mini_menu"><b><a href="#personajes-section">Personajes</a></b></li>
+              <li class="mini_menu"><a href="#klyntar">Klyntar</a></li>
+              <li class="mini_menu"><a href="#eddie">Eddie</a></li>
+              <li class="mini_menu"><a href="#anne">Anne</a></li>
           </ul> 
       </nav>
       <div class="relleno-nav"></div>
@@ -51,21 +51,22 @@
 
     
     <section class="venom-header">
-      <img src="./assets/images/venom-header.jpg" alt="">
+      <img src="./assets/images/venom-header.jpg">
       <p>Un reportero descubre que la Fundación Vida realiza experimentos ilegales en 
         humanos con formas de vida extraterrestres. Tras infiltrarse en la compañía,
         es infectado por una de esas criaturas....</p>
     </section>
     
-    <div class="grey_stripe" id="grey_stripe1"><img src="./assets/images/texture.png" alt=""></div>
 
+    <div class="grey_stripe" id="grey_stripe1"><img src="./assets/images/texture.png"></div>
     <video src="./assets/videos/trailer.mp4" controls></video>
 
-    <section class="personajes">
+
+    <section class="personajes" id="personajes-section">
       <h2>PERSONAJES</h2>
       <section class="personaje-individual" id="klyntar">
         <h3>Simbionte Venom (Klyntar)</h3>
-        <img src="./assets/images/simbionte-venom.png" alt="">
+        <img src="./assets/images/simbionte-venom.png" alt="simbionte venom">
         <p>El simbionte Venom se originó en el planeta Klyntar, donde fue despreciado y 
           considerado un "perdedor" por ser un enano y carecer de las avanzadas habilidades 
           de cambio de forma que poseen otros simbiontes.</p>
@@ -73,7 +74,7 @@
 
       <section class="personaje-individual" id="eddie">
         <h3>Eddie Brock - Tom Hardy</h3>
-        <img src="./assets/images/Edward.png" alt="">
+        <img src="./assets/images/Edward.png" alt="eddie">
         <p>Edward Thomas Hardy OBE (Londres, Reino Unido; 15 de septiembre de 1977) es un actor y productor cinematográfico británico.
           Hardy es un actor de método que ejecuta trasformaciones tanto físicas como vocales para adaptarse a cada papel.Sus actuaciones
           más icónicas que ha personificado son, a Eddie Brock / Venom, el antihéroe de la película homónima (2018) y su secuela Venom: 
@@ -82,19 +83,17 @@
 
       <section class="personaje-individual" id="anne">
         <h3>Anne Weying - Michelle Williams</h3>
-        <img src="./assets/images/Anne.png" alt="">
+        <img src="./assets/images/Anne.png" alt="anne">
         <p>Michelle Ingrid Williams (Kalispell, Montana, 9 de septiembre de 1980) es una actriz estadounidense. Saltó a la fama por
            su interpretación de Jennifer Lindley en la serie de televisión Dawson's Creek. Por su participación en las películas Brokeback
             Mountain y Manchester by the sea recibió nominaciones de los Premios Óscar a la mejor actriz de reparto, y por las películas 
-            Blue Valentine y Mi semana con Marilyn recibió una nominación a mejor actriz. </p>
+            Blue Valentine y Mi semana con Marilyn recibió una nominación a mejor actriz.</p>
       </section>
-
     </section>
 
 
-
     <section class="compras-imagenes">
-      <h2>ADQUIRIR ESTA PELÍCULA</h2>
+      <h2 id="compras-section">ADQUIRIR ESTA PELÍCULA</h2>
       <table>
         <thead>
           <tr>
@@ -133,31 +132,29 @@
         </tfoot>
       </table>
 
-      <h2>IMÁGENES</h2>
+      <h2 id="imagenes-section">IMÁGENES</h2>
       <img src="./assets/images/venom1.png" alt="venom-imagen">
       <img src="./assets/images/venom2.png" alt="venom-imagen">
       <img src="./assets/images/venom3.png" alt="venom-imagen">
       <img src="./assets/images/venom4.png" alt="venom-imagen">
-      
-      
     </section>
+
     
     <video class="video-tienda" src="./assets/videos/venom-tienda.mp4" controls></video>
-    <div class="grey_stripe" id="grey_stripe1"><img src="./assets/images/texture.png" alt=""></div>
+    <div class="grey_stripe" id="grey_stripe1"><img src="./assets/images/texture.png"></div>
 
-    <article class="review">
+
+    <article class="review" id="review-section">
       <h2>Review y Opinión</h2>
       <p>
-        Esta película me ha encantado. Entretenida en todo momento, tiene humor, tiene acción ,y la relacion de Venom 
+        Esta película me ha encantado. Entretenida en todo momento, tiene humor, tiene acción y la relacion entre Venom 
         y Eddie es interesante y a la vez bonita. Tom hardy, como siempre, a hecho un buen papel y ha sabido interpretar 
         su personaje.
       </p>
-      <p>
-        A mi me da igual las malas críticas de esta pelicula. Para mi, Venom es una muy buena pelicula.
-      </p>
+      <p>A mi me dan igual las malas críticas de esta pelicula. Para mi, Venom es una buena pelicula.</p><br><br>
 
       <form action="">
-        <legend>¿Que te ha parecido la película?</legend>
+        <legend>¿Que te ha parecido la película?</legend><br>
 
         <label for="nombre">Nombre</label><br>
         <input type="text" id="nombre" name="nombre" required autofocus><br><br>
@@ -183,15 +180,15 @@
       </form>
     </article>
 
-    <section class="links-section">
+    <section class="links-section" id="links-section">
       <h2>Links de interés</h2>
       <p><a href="https://www.metacritic.com/movie/venom-2018">metacritic</a></p>
       <p><a href="https://www.filmaffinity.com/es/reviews2/1/122208.html">filmaffinity</a></p>
       <p><a href="https://www.xataka.com/cine-y-tv/venom-critica-irregular-epopeya-antiheroica-que-sale-a-flote-gracias-al-carisma-tom-hardy">xataka</a></p>
     </section>
 
-    <footer>
-      <p><a href="view/privacy.html">Política de privacidad</a> <a href="view/faq.html">FAQ's</a> <a href="view/cookies.html">Política de Cookies</a> </p>  
+    <footer id="footer">
+      <p><a href="#">Política de privacidad</a> <a href="#">FAQ's</a> <a href="#">Política de Cookies</a> </p>  
       <p><a href="https://github.com/apalaciosdev" target="_blank">Developed by apalacios.dev</a></p>
   </footer>
   </body>

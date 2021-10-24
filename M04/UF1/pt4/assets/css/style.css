@@ -55,13 +55,6 @@ label{
   line-height: 150%;
 }
 
-.clearFix{
-  clear: both;
-  float: none;
-  margin: none;
-  padding: none;
-}
-
 .grey_stripe{
   background: url(./assets/images/texture.png) 50% 50% no-repeat; /* 50% 50% centers image in div */
   height: 150px;
