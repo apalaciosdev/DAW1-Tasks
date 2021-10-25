@@ -360,33 +360,32 @@ public class Act4_apalacios {
         ArrayList<String> ingredientes = new ArrayList<String>();
         
 
-        System.out.println("¿Qué pizza quieres? Escoje el número: Margarita[1], Boloniesa[2] o 3 quesos[3]");
-        int pizzaEj3 = teclado.nextInt();
-        String tipoPizza = "";
+        System.out.println("¿Qué pizza quieres? [Margarita, Boloniesa o 3Quesos]:");
+        String pizzaEj3 = teclado.next().toLowerCase();
         
         while (true) {
 
-            if(pizzaEj3 == 1){
+            if(pizzaEj3.equals("margarita")){
                 cuentaEj3 = cuentaEj3 + 6;
-                tipoPizza = "Margarita";
+                pizzaEj3 = "Margarita";
                 break;
             }
     
-            else if(pizzaEj3 == 2){
+            else if(pizzaEj3.equals("boloniesa")){
                 cuentaEj3 = cuentaEj3 + 8;
-                tipoPizza = "Boloniesa";
+                pizzaEj3 = "Boloniesa";
                 break;
             }
     
-            else if(pizzaEj3 == 3){
+            else if(pizzaEj3.equals("3quesos")){
                 cuentaEj3 = cuentaEj3 + 9;
-                tipoPizza = "3 quesos";
+                pizzaEj3 = "3 Quesos";
                 break;
             }
 
             else{
-            System.out.println("¿Qué pizza quieres? Escoje el número: Margarita[1], Boloniesa[2] o 3 quesos[3]");
-            pizzaEj3 = teclado.nextInt();
+            System.out.println("\nTipo de pizza inválida. Introduce una de las siguientes: [Margarita, Boloniesa o 3Quesos]");
+            pizzaEj3 = teclado.next();
             }
         }
 
@@ -412,7 +411,7 @@ public class Act4_apalacios {
             ingredientes.add("Salmón");
         }
 
-        System.out.println("\nHas pedido una pizza " + tipoPizza + " con los siguientes extras:");
+        System.out.println("\nHas pedido una pizza " + pizzaEj3 + " con los siguientes extras:");
 
         for (int i = 0; i < ingredientes.size(); i++){
             System.out.println("- " + ingredientes.get(i));
