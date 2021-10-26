@@ -337,7 +337,7 @@ public class Act4_apalacios {
             }
         }
 
-        else{
+        else if(esoEj2 == false){
             if(!cursoEj2){
                 System.out.println("\n" + nombreEj2 + " tiene " + edadEj2 + " años, no tiene aprovada la ESO y no repitió ninguna vez");
             }
@@ -346,6 +346,8 @@ public class Act4_apalacios {
                 System.out.println("\n" + nombreEj2 + " tiene " + edadEj2 + " años, no tiene aprovada la ESO y repitió " + cursosRepetidosEj2 + " vez/es");
             }
         }
+
+        
         
 
 
@@ -457,7 +459,8 @@ public class Act4_apalacios {
                     turnoEj4 = "tarde";
                     System.out.println("Introduce otro dia:");
                     diaEj4 = teclado.next().toLowerCase();
-                }else{
+                }
+                else{
                     turnoEj4 = "mañana";
                     break;
                 }
