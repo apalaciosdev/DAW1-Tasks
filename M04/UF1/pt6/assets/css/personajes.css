@@ -1,0 +1,44 @@
+.personajes{
+  background-color: rgb(26, 26, 26);
+  height: 70%;
+  padding: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.personajes > h2{
+  text-align: center;
+}
+
+.personaje-individual{
+  display: flex;
+  flex-flow: row wrap;
+ 
+  
+}
+
+.personaje-individual > p, img, h3{
+  display: flex;
+ 
+
+}
+
+
+.personaje-individual > p{
+  width: 40%;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.personaje-individual > h3{
+  width: 100%;
+  margin-top: 20px;
+}
+
+.personaje-individual > img{
+  width: 300px;
+  height: auto;
+  margin-bottom: 100px;
+  
+}

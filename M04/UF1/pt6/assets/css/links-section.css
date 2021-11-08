@@ -1,0 +1,10 @@
+.links-section{
+  height: 150px;
+  margin-top: 350px;
+  margin-left: 80px;
+}
+
+.links-section > h2{
+  text-align: left;
+  margin-bottom: 10px;
+}

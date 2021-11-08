@@ -1,0 +1,29 @@
+.compras-imagenes{
+  background-color: rgb(211, 211, 211);
+  height: 350px;
+  display: grid;
+  padding-top: 30px;
+  justify-items: center;
+}
+
+#compras-section{
+  color: rgb(37, 37, 37);
+  padding-top: 80px;
+  padding-bottom: -100px;
+}
+
+
+.compras-imagenes > table, tr, td{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.compras-imagenes > table > thead > tr > th{
+  text-align: center;
+}
+
+.compras-imagenes > table{
+  margin-top: -100px;
+  height: 30px;
+  width: 400px;
+}

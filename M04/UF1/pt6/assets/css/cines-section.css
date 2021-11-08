@@ -1,0 +1,15 @@
+.cines-section{
+  margin-right: 80px;
+  margin-left: 80px;
+  margin-top: 90px;
+  margin-bottom: 100px;
+}
+
+.cines-section > ul > li{
+  margin-bottom: 100px;
+}
+
+.cines-section > ul > li > h4{
+  font-size: 17px;
+  color: white;
+}

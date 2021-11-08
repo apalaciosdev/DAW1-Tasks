@@ -1,0 +1,10 @@
+.imagenes-flex-container{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.imagenes-flex-container > img{
+  width: 50%;
+}
