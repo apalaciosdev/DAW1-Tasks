@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemple JSON</title>
+	<script type="text/javascript">
+		window.onload=function(){
+			document.querySelector("#read-button").addEventListener('click', function() {
+				let file = document.querySelector("#file-input").files[0];
+				let reader = new FileReader();
+				reader.addEventListener('load', function(e) {
+			    		let text = e.target.result;
+			    		JSONDoc = JSON.parse(text);
+			    		console.log(JSONDoc);
+
+			    		//Generem el número de personatge que volem mostrar
+			    		var numPersonatge = Math.floor(Math.random()*2048);
+			    		
+			    		//*******************************************************
+			    		//Completa el següent codi
+			    		//*******************************************************
+
+			    		var nom = JSONDoc[numPersonatge].name;
+			    		var casa = JSONDoc[numPersonatge].house;
+			    		var imatge = JSONDoc[numPersonatge].image;
+			    		var fills = JSONDoc[numPersonatge].children;
+
+			    		//*******************************************************
+			    		//*******************************************************
+
+			    		document.getElementById("titol").textContent=nom;
+			    		document.getElementById("casa").textContent=casa;
+			    		document.getElementById("foto").setAttribute("src",imatge);
+			    		document.getElementById("fills").innerHTML="";
+			    		for(let i=0; i<fills.length; i++){
+			    			var li = document.createElement("li");
+			    			li.textContent=fills[i];
+			    			console.log(fills[i]);
+			    			document.getElementById("fills").appendChild(li);
+			    		}
+
+				});
+				reader.readAsText(file);
+			});	
+		};	
+	</script>
+</head>
+<body>
+	<input type="file" id="file-input" />
+	<button id="read-button">Llegir fitxer</button>
+	<pre id="file-contents"></pre>
+	<h1 id="titol"></h1>
+	<h2 id="casa"></h2>
+	<img id="foto" src="">
+	<br>
+	<label for="fills">Fills:</label>
+	<ol id="fills">
+	</ol>
+</body>
+</html>
