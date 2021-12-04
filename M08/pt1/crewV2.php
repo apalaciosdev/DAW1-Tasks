@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./fitxers/css.css">
+  <link rel="stylesheet" href="./css.css">
 </head>
 <body>
   <?php 
@@ -27,7 +27,7 @@
     foreach ($array as $contenido) {
       if(strpos($contenido, '.png') !== false){
         ?>
-        <td><img src="./fitxers/<?=$contenido?>"></td>
+        <td><img src="./<?=$contenido?> width="100" height="100""></td>
         <?php 
       }
 
@@ -35,7 +35,7 @@
         ?>
         <td>
         <audio controls>
-          <source src="./fitxers/<?=$contenido?>" type="audio/mp3">
+          <source src="./<?=$contenido?>" type="audio/mp3">
             Tu navegador no soporta audio HTML5.
           </audio>
         </td>
