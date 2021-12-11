@@ -27,7 +27,7 @@
     foreach ($array as $contenido) {
       if(strpos($contenido, '.png') !== false){
         ?>
-        <td><img src="./<?=$contenido?> width="100" height="100""></td>
+        <td><img src="./<?=$contenido?>" width="100" height="100""></td>
         <?php 
       }
 
