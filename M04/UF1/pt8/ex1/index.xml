@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE libreria SYSTEM "libreria.dtd">
+
+
+<libreria> 
+  <libro categoria="poesia">
+    <nombre>Don Quijote de la Mancha</nombre>
+    <fechaPublicacion>2010</fechaPublicacion>
+    <numeroEdicion>2</numeroEdicion>
+    <autor>Cervantes</autor>
+  </libro>
+
+  <libro categoria="viajes">
+    <nombre>Pepe</nombre>
+    <fechaPublicacion>2021</fechaPublicacion>
+    <numeroEdicion>1</numeroEdicion>
+    <autor>Pepe el Real</autor>
+  </libro>
+  
+  <libro categoria="novela">
+    <nombre>Sin tetas no hay paraiso</nombre>
+    <fechaPublicacion>2003</fechaPublicacion>
+    <numeroEdicion>1</numeroEdicion>
+    <autor>Panchito</autor>
+  </libro>
+  
+  <libro categoria="cocina">
+    <nombre>Karlos el cocinero</nombre>
+    <fechaPublicacion>2020</fechaPublicacion>
+    <numeroEdicion>2</numeroEdicion>
+    <autor>Karlos</autor>
+  </libro>
+</libreria>

@@ -1,0 +1,17 @@
+<!ELEMENT prestamos (prestamo+)>
+<!ELEMENT prestamo (fechaPrestamo, fechaDevolucion, socio, juegos)>
+<!ATTLIST prestamo id CDATA #REQUIRED>
+<!ELEMENT fechaPrestamo (#PCDATA)>
+<!ELEMENT fechaDevolucion (#PCDATA)>
+<!ELEMENT socio (dni, nombre, telefono)>
+<!ELEMENT dni (#PCDATA)>
+<!ELEMENT nombreSocio (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT juegos (juegoPrestado+)>
+<!ELEMENT juegoPrestado (codigo, nombre, version, compañia, añoRelease)>
+<!ATTLIST juegoPrestado ejemplar CDATA #REQUIRED>
+<!ELEMENT codigo (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT version (#PCDATA)>
+<!ELEMENT compañia (#PCDATA)>
+<!ELEMENT añoRelease (#PCDATA)>

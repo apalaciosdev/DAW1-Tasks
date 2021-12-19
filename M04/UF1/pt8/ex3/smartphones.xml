@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE smartphones SYSTEM "smartphones.dtd">
+
+<smartphones>
+  <mobil>
+    <nom>asdasd</nom>
+    <sistemaOperatiu>sdfsd</sistemaOperatiu>
+    <dimensions>
+      <altura>123</altura>
+      <amplada>1234</amplada>
+      <profunditat>234</profunditat>
+    </dimensions>
+    <pes>sdf</pes>
+    <resolucioPantalla>213</resolucioPantalla>
+    <processador>asdasd</processador>
+    <memoria>128</memoria>
+    <preu>1300</preu>
+  </mobil>
+  
+  <mobil>
+    <nom>asdasd</nom>
+    <sistemaOperatiu>sdfsd</sistemaOperatiu>
+    <dimensions>
+      <altura>123</altura>
+      <amplada>1234</amplada>
+      <profunditat>234</profunditat>
+    </dimensions>
+    <pes>sdf</pes>
+    <resolucioPantalla>213</resolucioPantalla>
+    <processador>asdasd</processador>
+    <memoria>128</memoria>
+    <preu>1300</preu>
+  </mobil>
+</smartphones>

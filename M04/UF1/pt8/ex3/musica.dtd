@@ -1,0 +1,13 @@
+<!ELEMENT listasMusicales (spotifyListas, groovesharkListas)>
+<!ELEMENT spotifyListas (lista+)>
+<!ELEMENT groovesharkListas (lista+)>
+<!ATTLIST lista id CDATA #REQUIRED>
+<!ELEMENT lista (nombre, fechaCreacion, canciones)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT fechaCreacion (#PCDATA)>
+<!ELEMENT canciones (cancion+)>
+<!ELEMENT cancion (titulo, autor, duracion)>
+<!ATTLIST cancion track CDATA #REQUIRED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT duracion (#PCDATA)>

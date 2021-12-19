@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<prestamos>
+  <prestamo id="sadasd">
+    <fechaPrestamo>14/11/2021</fechaPrestamo>
+    <fechaDevolucion>14/11/2021</fechaDevolucion>
+
+    <socio>
+      <dni>234234234T</dni>
+      <nombreSocio>Manolo Escobar</nombreSocio>
+      <telefono>687445820</telefono>
+    </socio>
+
+    <juegos>
+      <juegoPrestado ejemplar="adsfasd">
+        <codigo>sdfasdfs</codigo>
+        <nombre>sdfasdfasf</nombre>
+        <version>123rwef</version>
+        <compañia>sdfsdf</compañia>
+        <añoRelease>2004</añoRelease>
+      </juegoPrestado>
+
+      <juegoPrestado ejemplar="adsfasd">
+        <codigo>sdfasdfs</codigo>
+        <nombre>sdfasdfasf</nombre>
+        <version>123rwef</version>
+        <compañia>sdfsdf</compañia>
+        <añoRelease>2004</añoRelease>
+      </juegoPrestado>
+      
+      <juegoPrestado ejemplar="adsfasd">
+        <codigo>sdfasdfs</codigo>
+        <nombre>sdfasdfasf</nombre>
+        <version>123rwef</version>
+        <compañia>sdfsdf</compañia>
+        <añoRelease>2004</añoRelease>
+      </juegoPrestado>
+      
+      <juegoPrestado ejemplar="adsfasd">
+        <codigo>sdfasdfs</codigo>
+        <nombre>sdfasdfasf</nombre>
+        <version>123rwef</version>
+        <compañia>sdfsdf</compañia>
+        <añoRelease>2004</añoRelease>
+      </juegoPrestado>
+    </juegos>
+  </prestamo>
+</prestamos>

@@ -1,0 +1,13 @@
+<!ELEMENT smartphones (mobil+)>
+<!ELEMENT mobil (nom, sistemaOperatiu, dimensions, pes, resolucioPantalla, processador, memoria, preu)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT sistemaOperatiu (#PCDATA)>
+<!ELEMENT dimensions (altura, amplada, profunditat)>
+<!ELEMENT altura (#PCDATA)>
+<!ELEMENT amplada (#PCDATA)>
+<!ELEMENT profunditat (#PCDATA)>
+<!ELEMENT pes (#PCDATA)>
+<!ELEMENT resolucioPantalla (#PCDATA)>
+<!ELEMENT processador (#PCDATA)>
+<!ELEMENT memoria (#PCDATA)>
+<!ELEMENT preu (#PCDATA)>

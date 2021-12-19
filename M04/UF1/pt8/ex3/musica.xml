@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE listasMusicales SYSTEM "musica.dtd">
+
+<listasMusicales>
+  <spotifyListas>
+    <lista id="1231231234">
+      <nombre>Lista GG</nombre>
+      <fechaCreacion>2021/11/24</fechaCreacion>
+      <canciones>
+        <cancion track="234234hj23423423">
+          <titulo>Promesas</titulo>
+          <autor>Melendi</autor>
+          <duracion>3,34</duracion>
+        </cancion>
+        <cancion track="234234234asdasd">
+          <titulo>Mi carro</titulo>
+          <autor>Manolo Escobar</autor>
+          <duracion>Casi toda la peli</duracion>
+        </cancion>
+      </canciones>
+    </lista>
+    <lista id="1231231234">
+      <nombre>Lista GG2</nombre>
+      <fechaCreacion>2021/11/24</fechaCreacion>
+      <canciones>
+        <cancion track="234234hj23423423">
+          <titulo>Jardin con enanitos</titulo>
+          <autor>Melendi</autor>
+          <duracion>3,26</duracion>
+        </cancion>
+        <cancion track="234234dfgdfg234asdasd">
+          <titulo>Survive</titulo>
+          <autor>Lil Happy</autor>
+          <duracion>2,14</duracion>
+        </cancion>
+      </canciones>
+    </lista>
+  </spotifyListas>
+  <groovesharkListas>
+    <lista id="1231231231231234">
+      <nombre>Lista :V</nombre>
+      <fechaCreacion>2021/11/24</fechaCreacion>
+      <canciones>
+        <cancion track="234fggfdhj23423423">
+          <titulo>Titanic</titulo>
+          <autor>El canto del loco</autor>
+          <duracion>5,34</duracion>
+        </cancion>
+        <cancion track="234234dfgdfg234asdasd">
+          <titulo>Rosas</titulo>
+          <autor>La oreja de van</autor>
+          <duracion>2,34</duracion>
+        </cancion>
+      </canciones>
+    </lista>
+    <lista id="1231231231231231234">
+      <nombre>Lista :D</nombre>
+      <fechaCreacion>2021/11/24</fechaCreacion>
+      <canciones>
+        <cancion track="234234hj2dsaf3423423">
+          <titulo>Falling Down</titulo>
+          <autor>Lil Peep</autor>
+          <duracion>3,34</duracion>
+        </cancion>
+        <cancion track="23423asdasd4234asdasd">
+          <titulo>Let me know</titulo>
+          <autor>Juice WRLD</autor>
+          <duracion>2,43</duracion>
+        </cancion>
+      </canciones>
+    </lista>
+  </groovesharkListas>
+</listasMusicales>

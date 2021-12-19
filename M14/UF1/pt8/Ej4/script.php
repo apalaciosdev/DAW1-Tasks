@@ -8,34 +8,22 @@
   </head>
   <body>
     <?php
-      $inputLetra = strtolower($_POST['inputLetra']);
       $inputTexto = strtolower($_POST['inputTexto']);
-      
       
       function esVocal($inputTexto){
         $letrasTexto = str_split($inputTexto);
         $contador = 0;
-        $letra1EsVocal = (bool)false;
       
         for ($i=0; $i < count($letrasTexto) ; $i++) { 
           if ($letrasTexto[$i] == "a" || $letrasTexto[$i] == "e" || $letrasTexto[$i] == "i" || $letrasTexto[$i] == "o" || $letrasTexto[$i] == "u") {
-            $letra1EsVocal = (bool)true;
             $contador++;
           }
         }
-        if(count($letrasTexto) == 1){ //solo se imprime si está tratando $inputLetra
-          echo "<p>La letra  es vocal? " . (boolval($letra1EsVocal) ? 'true' : 'false' . "</p>") ;
-        }
-
-        else{
-          echo "<p>La cadena contiene " . $contador . " vocales.</p>";
-        }
-     }
+        echo "<p>La cadena contiene " . $contador . " vocales.</p>";
+      }
 
 
-  esVocal($inputLetra);
-  esVocal($inputTexto);
-  
+      esVocal($inputTexto);
 
     ?>
   </body>

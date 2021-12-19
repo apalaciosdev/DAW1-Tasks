@@ -1,0 +1,7 @@
+<!ELEMENT libreria (libro+)>
+<!ELEMENT libro (nombre, fechaPublicacion, numeroEdicion, autor+)>
+<!ATTLIST libro categoria (poesia|viajes|novela|cocina) #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT fechaPublicacion (#PCDATA)>
+<!ELEMENT numeroEdicion (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>

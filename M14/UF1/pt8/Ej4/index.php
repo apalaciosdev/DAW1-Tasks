@@ -8,9 +8,6 @@
   </head>
   <body>
   <form action="script.php" method="post">
-      <label for="inputLetra">Introduce la letra</label>
-      <input name="inputLetra" type="text" maxlength="1" required><br><br>
-
       <label for="inputTexto">Introduce el texto</label>
       <input name="inputTexto" type="text" required><br><br>
 
