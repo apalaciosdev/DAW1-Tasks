@@ -140,7 +140,6 @@ public class Act2_apalacios {
                     if(TaquillaCopia[i] < cantidadTaquilla){
                         TaquillaCopia[i] = 0;
                         
-                        
                         for(int j = i; j < TaquillaCopia.length -1; j++){
                             int temporal = TaquillaCopia[j];
                             TaquillaCopia[j] = TaquillaCopia[j+1];
