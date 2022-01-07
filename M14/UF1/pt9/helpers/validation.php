@@ -12,7 +12,7 @@
     $isValid = 0;
     
     if(!empty($response)){
-        $secret = "6Lc31PkdAAAAAN3cpitD03yEQth-JKDEJWby2pTK";
+        $secret = "";
         $ip = $_SERVER['REMOTE_ADDR'];
         $respuestaValidación = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$response&remoteip=$ip");
     
