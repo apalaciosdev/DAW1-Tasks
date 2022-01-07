@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej1</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+  </head>
+  <body>
+    <h1>Login</h1>
+    <form action="./helpers/validation.php" method="post" class="login">
+      <label for="user">Introduce el usuario</label>
+      <input name="user" type="text"><br><br>
+
+      <label for="password">Introduce la contraseña </label>
+      <input name="password" type="password" required><br><br>
+
+      <select name="tematica" id="tematica">
+        <option>Mecánico</option>
+        <option>Bombero</option>
+        <option>Policia</option>
+        <option>DataBase</option>
+      </select><br><br>
+      
+      <div class="g-recaptcha" data-sitekey="6Lc31PkdAAAAAAoCZKLSIjS6LkZVipWI1nYidt5D"></div>
+
+      <input type="submit" value="Continuar">
+    </form>
+
+    
+    
+  </body>
+</html>
