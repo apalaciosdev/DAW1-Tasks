@@ -1,0 +1,13 @@
+body{
+  background: url(../images/chapa.jpg);
+  color: white;
+  background-size: cover;
+  margin-top: 10px;
+  display: grid;
+  justify-items: center;
+}
+
+.gif-img{
+  width: 400px;
+  height: 400px;
+}
