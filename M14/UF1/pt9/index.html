@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ej1</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
   <body>
     <h1>Login</h1>
-    <form action="script.php" method="post" class="login">
+    <form action="./helpers/validation.php" method="post" class="login">
       <label for="user">Introduce el usuario</label>
       <input name="user" type="text"><br><br>
 
@@ -23,10 +24,14 @@
         <option>DataBase</option>
       </select><br><br>
       
+      <div class="g-recaptcha" data-sitekey="6Lc31PkdAAAAAAoCZKLSIjS6LkZVipWI1nYidt5D"></div>
       <input type="submit" value="Continuar">
-    </form>
-    <?php
+
       
-    ?>
+
+    </form>
+
+    
+    
   </body>
 </html>
