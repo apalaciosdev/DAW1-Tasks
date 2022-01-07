@@ -52,7 +52,7 @@
       }
       
       
-      else if($isValid == 0){
+      if($isValid == 0){
         echo "<p>Usuario o Contraseña incorrectos</p>";
         ?>
         <form action="index.html" method="post">

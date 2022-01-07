@@ -24,41 +24,50 @@
             //entrará aquí cuando todo sea correcto	
             while($row = mysqli_fetch_array($rec)){
                 $isValid++;
-                echo $isValid . "<br>";
                 $userName = $row['nom'] . " " . $row['cognom'];
+                $userID = $row['id'];
                 
                 if($isValid == 1){
-                  session_start();
-                  $_SESSION['login-user'] = $userName;
-        
-                  if($tematica == "Mecánico"){
-                    header("Location: ../pages/mecanico.php");
-                  }
-        
-                  else if($tematica == "Bombero"){
-                    header("Location: ../pages/bombero.php");
-                  }
-        
-                  else if($tematica == "Policia"){
-                    header("Location: ../pages/policia.php");
-                  }
-        
-                  else if($tematica == "DataBase"){
-                    header("Location: ../pages/database.php");
-                  }
-                }   
+                    session_start();
+                    $_SESSION['login-user'] = $userName;
+                    
+                    //hacemos un update de la última fecha de conexión del usuario
+                    $sql = "UPDATE usuaris SET dataUltimaConnexio=NOW() WHERE id='$userID'";
+                    if(mysqli_query($con, $sql)){
+                        echo "New record created successfully";
+                    } 
+                    else {
+                        echo "Error: " . $sql . "<br>" . mysqli_error($con);
+                    }
+
+
+
+                    if($tematica == "Mecánico"){
+                        header("Location: ../pages/mecanico.php");
+                    }
+
+                    else if($tematica == "Bombero"){
+                        header("Location: ../pages/bombero.php");
+                    }
+
+                    else if($tematica == "Policia"){
+                        header("Location: ../pages/policia.php");
+                    }
+
+                    else if($tematica == "DataBase"){
+                        header("Location: ../pages/database.php");
+                    }
+                }       
+            }
                 
-              }
-              
-              
-              if($isValid == 0){
-                echo "<p>Usuario o Contraseña incorrectos</p>";
-                ?>
-                <form action="../index.html" method="post">
-                  <input type="submit" value="Probar de nuevo">
-                 </form>
-                <?php
-              }
+            if($isValid == 0){
+            echo "<p>Usuario o Contraseña incorrectos</p>";
+            ?>
+            <form action="../index.html" method="post">
+                <input type="submit" value="Probar de nuevo">
+                </form>
+            <?php
+            }
         }
 
 
