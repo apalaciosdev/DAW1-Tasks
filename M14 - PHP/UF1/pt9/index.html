@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ej1</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="./styles/styles.css">
     <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
+
   <body>
     <h1>Login</h1>
-    <form action="./helpers/validation.php" method="post" class="login">
+    
+    <form action="./helpers/captchaValidation.php" method="post" class="login">
       <label for="user">Introduce el usuario</label>
       <input name="user" type="text"><br><br>
 
@@ -28,8 +30,5 @@
 
       <input type="submit" value="Continuar">
     </form>
-
-    
-    
   </body>
 </html>
