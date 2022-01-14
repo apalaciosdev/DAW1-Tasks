@@ -15,7 +15,6 @@ public class Act2_apalacios {
         String Pelis[]={"CLIMAX", "LAPLACE'S WITCH", "KEEPERS", "BURNING", "FIRST LOVE"};
         String Directores[]={"GASPAR NOÉ", "TAKASHI MIIKE", "KRISTOFFER NYHOLM", "LEE CHANG-DONG", "TAKASHI MIIKE"};
         int Taquilla[]={2036044, 10973306, 1202522, 7578063, 5567534};
-        //int Taquilla[]={1202522, 2036044, 5567534, 7578063, 10973306 };
 
 
      
