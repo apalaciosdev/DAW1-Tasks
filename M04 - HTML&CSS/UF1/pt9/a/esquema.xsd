@@ -6,17 +6,20 @@
     <xs:complexType>
       <xs:sequence>
 
-        <!-- hijos de biblioteca -->
+        <!-- hijos de biblioteca  [web & llibres]-->
+
+        <!-- [llibres] -->
         <xs:element name="llibres" minOccurs="1" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-            
-              
+
+
+              <!-- hijos de llibres -->
               <xs:element name="llibre" minOccurs="1" maxOccurs="unbounded">
 
                 <xs:complexType>
                   <xs:sequence>
-      
+                    <!-- elemento autor -->
                     <xs:element name="autor">
                       <xs:simpleType>
                         <xs:restriction base="xs:string">
@@ -24,18 +27,18 @@
                         </xs:restriction>
                       </xs:simpleType>
                     </xs:element>
-      
+
+                    <!-- elemento titulo -->
                     <xs:element name="titol">
-                     <xs:simpleType>
+                      <xs:simpleType>
                         <xs:restriction base="xs:string">
                           <xs:maxLength value="50"/>
                         </xs:restriction>
                       </xs:simpleType>
                     </xs:element>
-      
                   </xs:sequence>
-      
-      
+
+
                   <!-- atributo codigo -->
                   <xs:attribute name="codi">
                     <xs:simpleType>
@@ -45,41 +48,39 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:attribute>
-      
+
                   <!-- atributo ubicacio -->
                   <xs:attribute name="ubicacio">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:enumeration value="estanteria 1"/>
-                          <xs:enumeration value="estanteria 2"/>
-                          <xs:enumeration value="estanteria 3"/>
-                          <xs:enumeration value="estanteria 4"/>
-                          <xs:enumeration value="estanteria 5"/>
-                          <xs:enumeration value="estanteria 6"/>
-                          <xs:enumeration value="estanteria 7"/>
-                          <xs:enumeration value="estanteria 8"/>
-                          <xs:enumeration value="estanteria 9"/>
-                          <xs:enumeration value="estanteria 10"/>
-                          <xs:enumeration value="estanteria 11"/>
-                          <xs:enumeration value="estanteria 12"/>
-                          <xs:enumeration value="estanteria 13"/>
-                          <xs:enumeration value="estanteria 14"/>
+                        <xs:enumeration value="estanteria 2"/>
+                        <xs:enumeration value="estanteria 3"/>
+                        <xs:enumeration value="estanteria 4"/>
+                        <xs:enumeration value="estanteria 5"/>
+                        <xs:enumeration value="estanteria 6"/>
+                        <xs:enumeration value="estanteria 7"/>
+                        <xs:enumeration value="estanteria 8"/>
+                        <xs:enumeration value="estanteria 9"/>
+                        <xs:enumeration value="estanteria 10"/>
+                        <xs:enumeration value="estanteria 11"/>
+                        <xs:enumeration value="estanteria 12"/>
+                        <xs:enumeration value="estanteria 13"/>
+                        <xs:enumeration value="estanteria 14"/>
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:attribute>
-      
-      
+
+
                 </xs:complexType>
-              </xs:element>
-          
-          </xs:sequence>
+              </xs:element>      <!-- FIN de llibre -->
+
+            </xs:sequence>   
           </xs:complexType>
-        </xs:element>
-
-        <!-- hijos de biblioteca -->
+        </xs:element>        <!-- FIN de [llibres] -->
 
 
-      </xs:sequence>
+      </xs:sequence>   <!-- FIN hijos de biblioteca -->
     </xs:complexType>
   </xs:element>
 
