@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="esquema.xsd">
+  <web>
+    <nomWeb>google.es</nomWeb>
+  </web>
   <llibres>
-    <llibre codi="1" ubicacio="estanteria 3">
+    <llibre codi="1" ubicacio="a">
       <autor>Miguel Hernandez</autor>
       <titol>Obra poètica completa</titol>
     </llibre>
-    <llibre codi="3" ubicacio="estanteria 4">
+    <llibre codi="3" ubicacio="a">
       <autor>Miguel Hernandez</autor>
       <titol>Obra poètica completa</titol>
     </llibre>
   </llibres>
-  <web>sis</web>
+
+  
 </biblioteca>

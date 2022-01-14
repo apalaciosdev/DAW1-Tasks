@@ -8,6 +8,16 @@
 
         <!-- hijos de biblioteca  [web & llibres]-->
 
+        <!-- [web] -->
+        <xs:element name="web" >
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nomWeb"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+
         <!-- [llibres] -->
         <xs:element name="llibres" minOccurs="1" maxOccurs="unbounded">
           <xs:complexType>
@@ -53,20 +63,7 @@
                   <xs:attribute name="ubicacio">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
-                        <xs:enumeration value="estanteria 1"/>
-                        <xs:enumeration value="estanteria 2"/>
-                        <xs:enumeration value="estanteria 3"/>
-                        <xs:enumeration value="estanteria 4"/>
-                        <xs:enumeration value="estanteria 5"/>
-                        <xs:enumeration value="estanteria 6"/>
-                        <xs:enumeration value="estanteria 7"/>
-                        <xs:enumeration value="estanteria 8"/>
-                        <xs:enumeration value="estanteria 9"/>
-                        <xs:enumeration value="estanteria 10"/>
-                        <xs:enumeration value="estanteria 11"/>
-                        <xs:enumeration value="estanteria 12"/>
-                        <xs:enumeration value="estanteria 13"/>
-                        <xs:enumeration value="estanteria 14"/>
+                        <xs:pattern value="[estanteria]"/>
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:attribute>
