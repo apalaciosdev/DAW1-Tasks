@@ -63,7 +63,7 @@
                   <xs:attribute name="ubicacio">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
-                        <xs:pattern value="[estanteria]"/>
+                        <xs:pattern value="estanteria 1|estanteria 2|estanteria 3|estanteria 4|estanteria 5|estanteria 6|estanteria 7|estanteria 8|estanteria 9|estanteria 10|estanteria 11|estanteria 12|estanteria 13|estanteria 14"/>
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:attribute>

@@ -5,11 +5,11 @@
     <nomWeb>google.es</nomWeb>
   </web>
   <llibres>
-    <llibre codi="1" ubicacio="a">
+    <llibre codi="1" ubicacio="estanteria 2">
       <autor>Miguel Hernandez</autor>
       <titol>Obra poètica completa</titol>
     </llibre>
-    <llibre codi="3" ubicacio="a">
+    <llibre codi="3" ubicacio="estanteria 1">
       <autor>Miguel Hernandez</autor>
       <titol>Obra poètica completa</titol>
     </llibre>
