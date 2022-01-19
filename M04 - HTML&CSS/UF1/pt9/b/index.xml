@@ -2,13 +2,22 @@
 
 <taulaPeriodica xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="esquema.xsd">
   <atoms>
-    <atom estat="solid">
-      <nom></nom>
-      <simbol></simbol>
-      <numeroAtomic>100</numeroAtomic>
-      <pesAtomic></pesAtomic>
-      <puntEbullicio></puntEbullicio>
-      <densitat></densitat>
+    <atom estat="gaseos">
+      <nom>Hidrogen</nom>
+      <simbol>SH</simbol>
+      <numeroAtomic>1</numeroAtomic>
+      <pesAtomic>1.00794</pesAtomic>
+      <puntEbullicio unitats="K">20.28</puntEbullicio>
+      <densitat unitats="grams/centímetres  cúbics">0.0899</densitat>
+    </atom>
+    
+    <atom estat="gaseos">
+      <nom>Heli</nom>
+      <simbol>HE</simbol>
+      <numeroAtomic>1</numeroAtomic>
+      <pesAtomic>1.00794</pesAtomic>
+      <puntEbullicio unitats="K">20.28</puntEbullicio>
+      <densitat unitats="grams/centímetres  cúbics">0.0899</densitat>
     </atom>
   </atoms>
 

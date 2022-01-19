@@ -4,7 +4,7 @@
   <!-- elemento raíz -->
   <xs:element name="biblioteca">
     <xs:complexType>
-      <xs:sequence>
+      <xs:choice>
 
         <!-- hijos de biblioteca  [web & llibres]-->
 
@@ -77,7 +77,7 @@
         </xs:element>        <!-- FIN de [llibres] -->
 
 
-      </xs:sequence>   <!-- FIN hijos de biblioteca -->
+      </xs:choice>   <!-- FIN hijos de biblioteca -->
     </xs:complexType>
   </xs:element>
 

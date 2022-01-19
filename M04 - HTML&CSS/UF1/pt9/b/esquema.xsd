@@ -6,21 +6,15 @@
     <xs:complexType>
       <xs:sequence>
 
-        <!-- hijos de taulaPeriodica  [atoms]-->
-
-
-        <!-- [atoms] -->
         <xs:element name="atoms" minOccurs="1" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
 
-
-              <!-- hijos de atoms -->
               <xs:element name="atom" minOccurs="1" maxOccurs="unbounded">
 
                 <xs:complexType>
                   <xs:sequence>
-                    <!-- elemento autor -->
+           
                     <xs:element name="nom">
                       <xs:simpleType>
                         <xs:restriction base="xs:string">
@@ -29,17 +23,15 @@
                       </xs:simpleType>
                     </xs:element>
 
-                    <!-- elemento titulo -->
                     <xs:element name="simbol">
                       <xs:simpleType>
                         <xs:restriction base="xs:string">
-                          <xs:maxLength value="2"/>
+                          <xs:maxLength value="3"/>
+                          <xs:pattern value="[A-Z][a-zA-Z]( [A-Z][a-zA-Z])*"/>
                         </xs:restriction>
                       </xs:simpleType>
                     </xs:element>
                
-
-                    <!-- elemento titulo -->
                     <xs:element name="numeroAtomic">
                       <xs:simpleType>
                       <xs:restriction base="xs:int">
@@ -49,33 +41,40 @@
                     </xs:simpleType>
                     </xs:element>
                 
-
-                    <!-- elemento titulo -->
                     <xs:element name="pesAtomic">
                       <xs:simpleType>
-                        <xs:restriction base="xs:integer"/>
+                        <xs:restriction base="xs:float"/>
                       </xs:simpleType>
                     </xs:element>
-                
-
-                    <!-- elemento titulo -->
-                    <xs:element name="puntEbullicio">
-                      <xs:simpleType>
-                        <xs:restriction base="xs:integer"/>
-                      </xs:simpleType>
+  
+                    <xs:element name="puntEbullicio">                
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:float">
+                            <xs:attribute name="unitats" default="C">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                  <xs:pattern value="[C|K]"/>
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:attribute>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
                     </xs:element>
                  
-
-                    <!-- elemento titulo -->
                     <xs:element name="densitat">
-                      <xs:simpleType>
-                        <xs:restriction base="xs:integer"/>
-                      </xs:simpleType>
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="unitats"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
                     </xs:element>
+
                   </xs:sequence>
 
-
-                  <!-- atributo ubicacio -->
                   <xs:attribute name="estat">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -83,27 +82,13 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:attribute>
-
-
+                  
                 </xs:complexType>
-              </xs:element>      <!-- FIN de llibre -->
-
+              </xs:element>      
             </xs:sequence>   
           </xs:complexType>
-        </xs:element>        <!-- FIN de [llibres] -->
-
-
-      </xs:sequence>   <!-- FIN hijos de biblioteca -->
+        </xs:element>        
+      </xs:sequence>  
     </xs:complexType>
   </xs:element>
-
-  <xs:element name="llibre">
-
-  </xs:element>
-
-
-
-
 </xs:schema>
-
-<!-- minInclusive -->
