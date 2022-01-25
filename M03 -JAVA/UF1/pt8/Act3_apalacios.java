@@ -10,7 +10,7 @@ public class Act2_apalacios {
         ArrayList <ArrayList> arraylist1 = new ArrayList<>();
       
             
-        //idexOf()
+        //indexOf()
 
 
         System.out.println("\n\n---------------- FIN DEL PROGRAMA ----------------");
