@@ -56,7 +56,7 @@ public class Act2_apalacios {
         do {
             
             if(modificarLista.equals("s")){
-                System.out.println("¿Que asistente deseas modificar?");
+                System.out.println("¿Que asistente deseas modificar? Introduce el número del paciente:"); //hacer print de la arraylist de los nombres
                 int modificacionAsistente = (teclado.nextInt())-1;
                 
 
@@ -88,7 +88,7 @@ public class Act2_apalacios {
         do {
             
             if(borrarAsistente.equals("s")){
-                System.out.println("¿Que asistente deseas borrar?");
+                System.out.println("¿Que asistente deseas borrar? Introduce el número del paciente:");
                 int asistenteEliminado = (teclado.nextInt())-1;
                 
                 arraylist1.remove(asistenteEliminado);
