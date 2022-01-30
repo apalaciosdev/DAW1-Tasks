@@ -11,6 +11,7 @@ public class Act1_apalacios {
         int pacientesRegistrados = 0;
         
         
+        //Introducimos los 4 primeros pacientes
         for(int i = 0; i < 4; i++){
             System.out.print("Introduce el nombre del paciente "+ (i+1) + ":");
             String nombrePaciente = teclado.nextLine();
