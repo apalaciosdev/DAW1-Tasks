@@ -56,7 +56,7 @@ public class Act2_apalacios {
         do {
             
             if(modificarLista.equals("s")){
-                System.out.println("¿Que asistente deseas modificar? Introduce el número del paciente:"); //hacer print de la arraylist de los nombres
+                System.out.println("¿Que asistente deseas modificar? Introduce el número del paciente:"); 
                 int modificacionAsistente = (teclado.nextInt())-1;
                 
 
