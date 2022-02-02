@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nba SYSTEM "nba.dtd">
+<nba>
+  <equip sigles="LAK">
+    <nomCiutat>Los Angeles</nomCiutat>
+    <nomEquip>Lakers</nomEquip>
+    <staffTecnic>
+      <entrenador>Frank Vogel</entrenador>
+      <asistent>David Fizdale</asistent>
+    </staffTecnic>
+    <plantilla>
+      <jugador>
+        <nom>Lebron James</nom>
+        <dorsal>23</dorsal>
+        <sou>2.000.000$</sou>
+      </jugador>
+      <!-- ... Podriem afegir tants jugadors com necessitessim -->
+    </plantilla>
+  </equip>
+  <equip sigles="CHI">
+    <nomCiutat>Chicago</nomCiutat>
+    <nomEquip>Bulls</nomEquip>
+    <staffTecnic>
+      <entrenador>Billy Donovan</entrenador>
+      <asistent>Maurice Cheeks</asistent>
+    </staffTecnic>
+    <plantilla>
+      <jugador>
+        <nom>Lonzo Ball</nom>
+        <dorsal>2</dorsal>
+        <sou>1.000.000$</sou>
+      </jugador>
+      <!-- ... Podriem afegir tants jugadors com necessitessim -->
+    </plantilla>
+  </equip>
+  <!-- ... Podriem afegir tants equips com necesitem guardar -->
+</nba>

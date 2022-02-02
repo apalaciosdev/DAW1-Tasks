@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<arbres>
+  <arbre>
+    <nom>
+      <comu>Naranjo</comu>
+      <cientific>Naranjus</cientific>
+    </nom>
+    <ubicacio>Valencia</ubicacio>
+    <clima>Soleado</clima>
+    <vegetacio>
+      <tipusFulla>Perenne</tipusFulla>
+      <floracio>Si</floracio>
+      <fruit>Naranjas</fruit>
+    </vegetacio>
+    <mides>
+      <alçada>2</alçada>
+      <copa>4</copa>
+    </mides>
+    <edatAproximada>120</edatAproximada>
+  </arbre>
+ 
+  <arbre>
+    <nom>
+      <comu>Almendro</comu>
+      <cientific>Alemdrus</cientific>
+    </nom>
+    <ubicacio>España</ubicacio>
+    <clima>Soleado</clima>
+    <vegetacio>
+      <tipusFulla>Caducifoli</tipusFulla>
+      <floracio>Si</floracio>
+      <fruit>Almendras</fruit>
+    </vegetacio>
+    <mides>
+      <alçada>2</alçada>
+      <copa>4</copa>
+    </mides>
+    <edatAproximada>100</edatAproximada>
+  </arbre>
+</arbres>

@@ -1,0 +1,31 @@
+<!ELEMENT nba (equip+)>
+
+<!ELEMENT equip (nomCiutat, nomEquip, staffTecnic, plantilla)>
+<!ATTLIST equip sigles CDATA #REQUIRED>
+
+<!ELEMENT nomCiutat (#PCDATA)>
+<!ELEMENT nomEquip (#PCDATA)>
+
+<!ELEMENT staffTecnic (entrenador, asistent*)>
+<!ELEMENT entrenador (#PCDATA)>
+<!ELEMENT asistent (#PCDATA)>
+
+<!ELEMENT plantilla (jugador+)>
+<!ELEMENT jugador (nom, dorsal, sou)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT dorsal (#PCDATA)>
+<!ELEMENT sou (#PCDATA)>
+
+
+
+
+
+
+
+
+<!-- 
+ L’atribut sigles del element equip es obligatori.
+ La plantilla pot contenir més d’un jugador.
+ staffTecnic només pot tenir un entrenador i l’asistent és opcional.
+
+-->

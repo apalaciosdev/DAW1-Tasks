@@ -1,0 +1,42 @@
+{
+  "matricules":[
+    {
+      "nom": "Aaron",
+      "cognoms": "Palacios Olea",
+      "curs": "DAW 1",
+      "unitatsFormatives": [
+        {
+          "codi": "M2-UF1",
+          "nom": "Bases de Dades - M4",
+          "modul": 1,
+          "convocatoriesExhaurides": 2
+        },
+        {
+          "codi": "M4-UF1",
+          "nom": "Llenguatge de Marques i Sistemes de Gestió d'Informació",
+          "modul": "M4",
+          "convocatoriesExhaurides": 0
+        }
+      ]
+    },
+    {
+      "nom": "Marc",
+      "cognoms": "Gallego Pozo",
+      "curs": "DAW 1",
+      "unitatsFormatives": [
+        {
+          "codi": "M2-UF1",
+          "nom": "Bases de Dades",
+          "modul": "M2",
+          "convocatoriesExhaurides": 0
+        },
+        {
+          "codi": "M4-UF1",
+          "nom": "Llenguatge de Marques i Sistemes de Gestió d'Informació - M4",
+          "modul": 3,
+          "convocatoriesExhaurides": 3
+        }
+      ]
+    }
+  ]
+}
