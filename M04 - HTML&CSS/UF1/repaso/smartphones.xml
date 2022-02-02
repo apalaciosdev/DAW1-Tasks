@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<smartphones>
+  <smartphone>
+    <nombre>iPhone 12</nombre>
+    <so>iOS 14</so>
+    <dimensiones>
+      <altura>144</altura>
+      <anchura>71,4</anchura>
+      <profundidad>8,1</profundidad>
+    </dimensiones>
+    <peso>194</peso>
+    <resolucionPantalla>1792 x 828</resolucionPantalla>
+    <procesador>aChip</procesador>
+    <memoria>128</memoria>
+    <precio>800</precio>
+  </smartphone>
+  
+  <smartphone>
+    <nombre>iPhone 11</nombre>
+    <so>iOS 14</so>
+    <dimensiones>
+      <altura>144</altura>
+      <anchura>71,4</anchura>
+      <profundidad>8,1</profundidad>
+    </dimensiones>
+    <peso>194</peso>
+    <resolucionPantalla>1792 x 828</resolucionPantalla>
+    <procesador>aChip</procesador>
+    <memoria>128</memoria>
+    <precio>800</precio>
+  </smartphone>
+</smartphones>

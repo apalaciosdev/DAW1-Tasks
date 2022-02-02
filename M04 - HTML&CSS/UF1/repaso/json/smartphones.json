@@ -1,0 +1,32 @@
+{
+  "smartphones":[
+    {
+      "nombre": "iPhone 12",
+      "so": "iOs 14",
+      "dimensiones": {
+        "altura": 144,
+        "anchura": 71.4,
+        "profundidad": 8.1
+      },
+      "peso": 194,
+      "resolucionPantalla": "1792 x 828",
+      "procesador": "aChip",
+      "memoria": 128,
+      "precio": 800
+    },
+    {
+      "nombre": "iPhone 11",
+      "so": "iOs 14",
+      "dimensiones": {
+        "altura": 144,
+        "anchura": 71.4,
+        "profundidad": 8.1
+      },
+      "peso": 194,
+      "resolucionPantalla": "1792 x 828",
+      "procesador": "aChip",
+      "memoria": 128,
+      "precio": 800
+    }
+  ]
+}
