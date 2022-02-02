@@ -1,0 +1,31 @@
+<!ELEMENT series (serie+)>
+<!ELEMENT serie (nombreSerie, sinopsis, numeroTemporadas, fechaPublicacion, director, guinista+, actores, temporadas)>
+<!ELEMENT nombreSerie (#PCDATA)>
+<!ELEMENT sinopsis (#PCDATA)>
+<!ELEMENT numeroTemporadas (#PCDATA)>
+<!ELEMENT fechaPublicacion (#PCDATA)>
+
+<!ELEMENT director (nombre, apellidos)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+
+<!ELEMENT guionista (#PCDATA)>
+
+<!ELEMENT actores (principales, secundarios)>
+<!ELEMENT principales (actor+)>
+<!ELEMENT secundarios (actor+)>
+<!ELEMENT actor (nombreActor, apellidosActor, nombrePersonaje)>
+<!ELEMENT nombreActor (#PCDATA)>
+<!ELEMENT apellidosActor (#PCDATA)>
+<!ELEMENT nombrePersonaje (#PCDATA)>
+
+<!ELEMENT temporadas (temporada+)>
+<!ELEMENT temporada (añoEstreno, numeroCapitulos, capitulos)>
+<!ATTLIST temporada num CDATA #REQUIRED>
+<!ELEMENT añoEstreno (#PCDATA)>
+<!ELEMENT numeroCapitulos (#PCDATA)>
+
+<!ELEMENT capitulos (capitulo+)>
+<!ELEMENT capitulo (nombreCapitulo)>
+<!ATTLIST capitulo num CDATA #REQUIRED>
+<!ELEMENT nombreCapitulo (#PCDATA)>
