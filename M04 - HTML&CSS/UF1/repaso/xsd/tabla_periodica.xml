@@ -7,17 +7,17 @@
       <simbolo>H</simbolo>
       <numeroAtomico>1</numeroAtomico>
       <pesoAtomico>1,00794</pesoAtomico>
-      <puntoBullicion unidades="kelvin">20,28</puntoBullicion>
-      <densidad unidades="gramos">0,0899</densidad>
+      <puntoBullicion unidades="K">20.28</puntoBullicion>
+      <densidad unidades="gramos">0.0899</densidad>
     </atomo>
     
-    <atomo estado="gaseoso">
+    <atomo estado="liquido">
       <nombre>Hidrógeno</nombre>
       <simbolo>H</simbolo>
       <numeroAtomico>1</numeroAtomico>
       <pesoAtomico>1,00794</pesoAtomico>
-      <puntoBullicion unidades="kelvin">20,28</puntoBullicion>
-      <densidad unidades="gramos">0,0899</densidad>
+      <puntoBullicion unidades="C">20.28</puntoBullicion>
+      <densidad unidades="gramos">0.0899</densidad>
     </atomo>
   </atomos>
 </tablaPeriodica>

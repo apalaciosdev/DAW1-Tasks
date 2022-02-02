@@ -4,7 +4,7 @@
   <!-- elemento raíz -->
   <xs:element name="biblioteca">
     <xs:complexType>
-      <xs:choice>
+      <xs:all>
 
         <!-- hijos de biblioteca  [web & llibres]-->
 
@@ -38,7 +38,7 @@
                       </xs:simpleType>
                     </xs:element>
 
-                    <!-- elemento titulo MAX 50 CARACTERES-->
+                    <!-- elemento titulo -->
                     <xs:element name="titol">
                       <xs:simpleType>
                         <xs:restriction base="xs:string">
@@ -77,7 +77,7 @@
         </xs:element>        <!-- FIN de [llibres] -->
 
 
-      </xs:choice>   <!-- FIN hijos de biblioteca -->
+      </xs:all>   <!-- FIN hijos de biblioteca -->
     </xs:complexType>
   </xs:element>
 
