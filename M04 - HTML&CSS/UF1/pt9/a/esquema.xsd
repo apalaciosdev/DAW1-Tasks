@@ -38,7 +38,7 @@
                       </xs:simpleType>
                     </xs:element>
 
-                    <!-- elemento titulo -->
+                    <!-- elemento titulo MAX 50 CARACTERES-->
                     <xs:element name="titol">
                       <xs:simpleType>
                         <xs:restriction base="xs:string">

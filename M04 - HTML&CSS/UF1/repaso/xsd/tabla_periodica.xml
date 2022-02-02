@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tablaPeriodica xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="esquema.xsd">
+  <atomos>
+    <atomo estado="gaseoso">
+      <nombre>Hidrógeno</nombre>
+      <simbolo>H</simbolo>
+      <numeroAtomico>1</numeroAtomico>
+      <pesoAtomico>1,00794</pesoAtomico>
+      <puntoBullicion unidades="kelvin">20,28</puntoBullicion>
+      <densidad unidades="gramos">0,0899</densidad>
+    </atomo>
+    
+    <atomo estado="gaseoso">
+      <nombre>Hidrógeno</nombre>
+      <simbolo>H</simbolo>
+      <numeroAtomico>1</numeroAtomico>
+      <pesoAtomico>1,00794</pesoAtomico>
+      <puntoBullicion unidades="kelvin">20,28</puntoBullicion>
+      <densidad unidades="gramos">0,0899</densidad>
+    </atomo>
+  </atomos>
+</tablaPeriodica>
