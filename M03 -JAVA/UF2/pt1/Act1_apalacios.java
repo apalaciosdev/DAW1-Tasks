@@ -5,52 +5,18 @@ public class Act1_apalacios {
     public static void main(String[] args) throws Exception {
 
         Scanner teclado = new Scanner(System.in, "UTF-8");   
+        float maxKmCoches[] = {};
         
-        ArrayList<String> pacientes = new ArrayList<String>();
-        boolean state = true;
-        int pacientesRegistrados = 0;
+        System.out.println("Introduce número de modelos de coche que dispones:");
+        int cantidadModelos = teclado.nextInt();
         
-        
-        //Introducimos los 4 primeros pacientes
-        for(int i = 0; i < 4; i++){
-            System.out.print("Introduce el nombre del paciente "+ (i+1) + ":");
-            String nombrePaciente = teclado.nextLine();
-            pacientes.add(nombrePaciente);
-            pacientesRegistrados ++;
+        for (int i = 0; i < cantidadModelos; i++) {
+            System.out.println("MODELO " + (i+1));
+            System.out.println("¿Cual es la distancia máxima en KM que permite recorrer diáriamente?");
+            float kmMaxDiarios = teclado.nextFloat();
+            
+            maxKmCoches[i] = kmMaxDiarios;
         }
-        
-        
-        
-        while(state && pacientesRegistrados < 10){
-            
-            //Medico trata a paciente
-            System.out.print("La doctora cura al paciente "+ pacientes.remove(0) + "\n");
-            
-            System.out.print("Introduce el nombre del siguiente paciente:");
-            String nombrePaciente = teclado.nextLine();
-            pacientesRegistrados ++;
-
-            
-            //Si no se introduce nada en el input
-            if(nombrePaciente.equalsIgnoreCase("")){
-                System.out.println("La jornada termina por hoy. La doctora tratará al resto de pacientes.");
-                state = false;
-            }
-
-
-            //Colar pacientes
-            System.out.print("¿Deseas colar al paciente? (s/n)");
-            String opt = teclado.nextLine().toLowerCase();
-            if(opt.equals("s")){
-                pacientes.add(0, nombrePaciente);
-            } else {
-                pacientes.add(nombrePaciente);
-            }
-            
-        }
-        
-        System.out.println("La jornada ha terminado por hoy. La doctora tratará al resto de pacientes.");
-        
         
     
         
