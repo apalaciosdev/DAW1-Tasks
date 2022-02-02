@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<series>
+  <serie>
+    <nombreSerie></nombreSerie>
+    <sinopsis></sinopsis>
+    <numeroTemporadas></numeroTemporadas>
+    <fechaPublicacion></fechaPublicacion>
+    
+    <director> <!-- Solo puede haber un director -->
+      <nombre></nombre>
+      <apellidos></apellidos>
+    </director>
+    
+    <guionista>Pepe</guionista> <!-- Pueden haber varios guinistas -->
+    <guionista>Juan</guionista>
+
+    <actores> <!-- Mínimo un actor -->
+      <principales>
+        <actor>
+          <nombreActor>Olga</nombreActor>
+          <apellidosActor>Martinez</apellidosActor>
+          <nombrePersonaje>Pepa</nombrePersonaje>
+        </actor>
+        <actor>
+          <nombreActor>Maria</nombreActor>
+          <apellidosActor>Martinez</apellidosActor>
+          <nombrePersonaje>Marta</nombrePersonaje>
+        </actor>
+      </principales>
+
+      <secundarios>
+        <actor>
+          <nombreActor>Manolo</nombreActor>
+          <apellidosActor>Perez</apellidosActor>
+          <nombrePersonaje>Manolo</nombrePersonaje>
+        </actor>
+        <actor>
+          <nombreActor>Aitor</nombreActor>
+          <apellidosActor>Fernandez</apellidosActor>
+          <nombrePersonaje>Daniel</nombrePersonaje>
+        </actor>
+      </secundarios>
+    </actores>  
+
+    <temporadas> <!-- Atributo num OBLIGATORIO -->
+      <temporada num="1">
+        <añoEstreno></añoEstreno>
+        <numeroCapitulos></numeroCapitulos>
+        
+        <capitulos>
+          <capitulo num="1">
+            <nombreCapitulo>Génesis</nombreCapitulo>
+          </capitulo>
+          <capitulo num="2">
+            <nombreCapitulo>Amanecer</nombreCapitulo>
+          </capitulo>
+        </capitulos>
+      </temporada>
+      
+      <temporada num="2">
+        <añoEstreno></añoEstreno>
+        <numeroCapitulos></numeroCapitulos>
+        
+        <capitulos>
+          <capitulo num="1">
+            <nombreCapitulo>Génesis</nombreCapitulo>
+          </capitulo>
+          <capitulo num="2">
+            <nombreCapitulo>Amanecer</nombreCapitulo>
+          </capitulo>
+        </capitulos>
+      </temporada>
+    </temporadas>
+  </serie>
+
+</series>
