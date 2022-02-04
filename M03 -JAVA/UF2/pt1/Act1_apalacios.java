@@ -16,6 +16,7 @@ public class Act1_apalacios {
             float kmMaxDiarios = teclado.nextFloat();
             
             maxKmCoches[i] = kmMaxDiarios;
+            
         }
         
     
