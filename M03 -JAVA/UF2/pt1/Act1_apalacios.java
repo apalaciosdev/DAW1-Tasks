@@ -19,7 +19,7 @@ public class Act1_apalacios {
 
         //introducimos los km de cada modelo
         for (int i = 0; i < cantidadModelos; i++) {
-            System.out.println("MODELO " + (i + 1));
+            System.out.println("\nMODELO " + (i + 1));
             System.out.println("¿Cual es la distancia máxima en KM que permite recorrer diáriamente?");
             int kmMaxDiarios = teclado.nextInt();
             maxKmCoches[i] = kmMaxDiarios;
@@ -73,26 +73,35 @@ public class Act1_apalacios {
                 }
 
 
-                //calculos de km totales recorridos
+                //CÁLCULOS FINALES DEL ALQUILER
+                System.out.println("\n\n------Datos finales del alquiler------");
+
+                //cálculos de km totales recorridos
                 int totalKmDiarios = 0;
                 for (Integer kmDiarioRecorrido : kmPorDia) {
                     totalKmDiarios = totalKmDiarios + kmDiarioRecorrido;
                 }
-                System.out.println("Distancia total recorrida: " + totalKmDiarios + "km");
-                kmPorDia.clear(); //vaciamos lista
-
+                System.out.println("\nDistancia total recorrida: " + totalKmDiarios + "km");
 
                 //comprobamos si se ha superado la distáncia total máxima permitida
-                int maxDistanciaTotalPermitida =  //maxDistanciaTotalPermitida = kmIntroducidosCoche/dia * diasAlquiler
+                int maxDistanciaTotalPermitida = maxKmCoches[eleccionVehiculo-1]*totalDiasVehiculo; //maxDistanciaTotalPermitida = kmIntroducidosCoche/dia * diasAlquiler
+                if(totalKmDiarios > maxDistanciaTotalPermitida){
+                    System.out.println("\nALERTA, ¡has superdado la distáncia total máxima permitida!");
+                    System.out.println(" - Distáncia total máxima permitida: "+ maxDistanciaTotalPermitida);
+                    System.out.println(" - Distáncia total máxima recorrida: "+ totalKmDiarios);
+                }
+
+                //dia con más km
+                int diaMenosKm = (kmPorDia.indexOf(Collections.min(kmPorDia))+1);
+                int diaMasKm = (kmPorDia.indexOf(Collections.max(kmPorDia))+1);
+                System.out.println("\nDia con menos km: Dia " + diaMenosKm + " con un total de " + Collections.min(kmPorDia) + "km");
+                System.out.println("Dia con más km: Dia " + diaMasKm + " con un total de " + Collections.max(kmPorDia) + "km");
+                System.out.println("\n\n--------------------------------------");
+
+                kmPorDia.clear(); //vaciamos lista
             }
         }
 
-        /*
-        Finalment heu de mostrar la distància total que ha fet l’usuari/a amb el vehicle
-        en tot el seu viatge, comparar-ho amb la màxima teòrica que pot recórrer avisant
-        si l’han superada. També haurà de mostrar quin dia ha fet més Km i quin dia n’ha
-        fet menys.
-        */
 
         System.out.println("\n\n---------------- FIN DEL PROGRAMA ----------------");
         System.out.println("----------------- Aaron Palacios -----------------");
