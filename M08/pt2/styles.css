@@ -1,0 +1,36 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background: url(./images/login.jpg);
+  color: white;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+}
+
+input{
+  width: 250px;
+}
+
+button{
+  float: right;
+  margin-bottom: 30px;
+}
+
+
+.login{
+  background-color: rgb(190, 190, 190, 0.2);
+  border: 1px solid white;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+
+.link{
+  margin-top: 300;
+}
