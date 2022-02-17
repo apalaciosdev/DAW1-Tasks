@@ -14,7 +14,7 @@ public class Act1_apalacios {
 
 
         //creamos el array con el tamaño de cantidad de modelos
-        int maxKmCoches[] = new int [cantidadModelos];
+        int arrayMaxKmCoches[] = new int [cantidadModelos];
 
 
         //introducimos los km de cada modelo
@@ -22,7 +22,7 @@ public class Act1_apalacios {
             System.out.println("\nMODELO " + (i + 1));
             System.out.println("¿Cual es la distancia máxima en KM que permite recorrer diáriamente?");
             int kmMaxDiarios = teclado.nextInt();
-            maxKmCoches[i] = kmMaxDiarios;
+            arrayMaxKmCoches[i] = kmMaxDiarios;
         }
 
 
@@ -32,8 +32,8 @@ public class Act1_apalacios {
             System.out.println("\n\n---Lista de modelos---\n");
             System.out.println("0.- Exit\n");
 
-            for (int i = 0; i < maxKmCoches.length; i++) {
-                System.out.println((i+1) + ".- " + maxKmCoches[i] + "\n");
+            for (int i = 0; i < arrayMaxKmCoches.length; i++) {
+                System.out.println((i+1) + ".- " + arrayMaxKmCoches[i] + "\n");
             }
             System.out.println("----------------------");
 
@@ -43,19 +43,17 @@ public class Act1_apalacios {
 
 
             //si la opción escogida es 0 se repite el loop con mensaje de error
-            if(eleccionVehiculo < 0 || eleccionVehiculo > maxKmCoches.length){
+            if(eleccionVehiculo < 0 || eleccionVehiculo > arrayMaxKmCoches.length){
                 System.err.println("\n\n\nERROR, elección no válida. Escoge nuevamente:");
             }
 
 
             //si la opción escogida es 0 sale del bucle
-            else if(eleccionVehiculo==0){
-                state = false;
-            }
+            else if(eleccionVehiculo==0) state = false;
 
 
             //si la opción escogida es la de un vehículo existente entonces entra aquí
-            else if(eleccionVehiculo >= 0 && eleccionVehiculo <= maxKmCoches.length){
+            else if(eleccionVehiculo >= 0 && eleccionVehiculo <= arrayMaxKmCoches.length){
                 System.out.println("\n\n¿Cuántos dias utilizarás el vehículo?");
                 int totalDiasVehiculo = teclado.nextInt();
 
@@ -67,7 +65,7 @@ public class Act1_apalacios {
                     kmPorDia.add(kmDia);
 
                     //comprobamos si se ha superado la distáncia máxima por dia
-                    if(kmDia > maxKmCoches[eleccionVehiculo-1]){
+                    if(kmDia > arrayMaxKmCoches[eleccionVehiculo-1]){
                         System.out.println("\nALERTA, ¡Superaste el límite diario!");
                     }
                 }
@@ -84,7 +82,7 @@ public class Act1_apalacios {
                 System.out.println("\nDistancia total recorrida: " + totalKmDiarios + "km");
 
                 //comprobamos si se ha superado la distáncia total máxima permitida
-                int maxDistanciaTotalPermitida = maxKmCoches[eleccionVehiculo-1]*totalDiasVehiculo; //maxDistanciaTotalPermitida = kmIntroducidosCoche/dia * diasAlquiler
+                int maxDistanciaTotalPermitida = arrayMaxKmCoches[eleccionVehiculo-1]*totalDiasVehiculo; //maxDistanciaTotalPermitida = kmIntroducidosCoche/dia * diasAlquiler
                 if(totalKmDiarios > maxDistanciaTotalPermitida){
                     System.out.println("\nALERTA, ¡has superdado la distáncia total máxima permitida!");
                     System.out.println(" - Distáncia total máxima permitida: "+ maxDistanciaTotalPermitida);
