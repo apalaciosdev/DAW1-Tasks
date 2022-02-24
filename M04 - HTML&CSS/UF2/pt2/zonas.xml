@@ -1,0 +1,28 @@
+<zonas>
+
+  <zona>
+    <cod_zona>BCN</cod_zona>
+    
+    <nombre>BARCELONA</nombre>
+    
+    <director>PEPE</director>
+  </zona>
+
+  <zona>
+    <cod_zona>TGN</cod_zona>
+    
+    <nombre>TARRAGONA</nombre>
+    
+    <director>JOSE</director>
+  </zona>
+
+  <zona>
+    <cod_zona>VLC</cod_zona>
+    
+    <nombre>VALENCIA</nombre>
+    
+    <director>JOAQUIN</director>
+  </zona>
+
+  
+  </zonas>
