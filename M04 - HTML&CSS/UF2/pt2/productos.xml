@@ -2,45 +2,38 @@
 
     <produc>
         <cod_prod>23423</cod_prod>
-        
         <denominacion>BARCELONESA</denominacion>
-        
         <precio>12312</precio>
-        
         <stock_actual>234</stock_actual>
-        
         <stock_minimo>12</stock_minimo>
-        
-        <cod_zona>BCN</cod_zona>
-    </produc>
-    
-    <produc>
-        <cod_prod>23523</cod_prod>
-        
-        <denominacion>VALENCIANA</denominacion>
-        
-        <precio>522</precio>
-        
-        <stock_actual>53234</stock_actual>
-        
-        <stock_minimo>5342</stock_minimo>
-        
-        <cod_zona>VLC</cod_zona>
-    </produc>
-    
-    <produc>
-        <cod_prod>23523</cod_prod>
-        
-        <denominacion>TARRAGONESA</denominacion>
-        
-        <precio>522</precio>
-        
-        <stock_actual>53234</stock_actual>
-        
-        <stock_minimo>5342</stock_minimo>
-        
-        <cod_zona>TGN</cod_zona>
+        <cod_zona>10</cod_zona>
     </produc>
 
+    <produc>
+        <cod_prod>23523</cod_prod>
+        <denominacion>VALENCIANA</denominacion>
+        <precio>522</precio>
+        <stock_actual>53234</stock_actual>
+        <stock_minimo>5342</stock_minimo>
+        <cod_zona>20</cod_zona>
+    </produc>
+
+    <produc>
+        <cod_prod>23523</cod_prod>
+        <denominacion>TARRAGONESA</denominacion>
+        <precio>522</precio>
+        <stock_actual>53234</stock_actual>
+        <stock_minimo>5342</stock_minimo>
+        <cod_zona>30</cod_zona>
+    </produc>
+
+    <produc>
+        <cod_prod>2352323</cod_prod>
+        <denominacion>ITALIANA</denominacion>
+        <precio>12</precio>
+        <stock_actual>20000</stock_actual>
+        <stock_minimo>1000</stock_minimo>
+        <cod_zona>20</cod_zona>
+    </produc>
 
 </productos>
