@@ -1,0 +1,31 @@
+body{
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.productBox{
+  margin: 30px;
+  display: flex;
+  width: 400px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.rightDiv{
+  width: 60%;
+}
+
+.leftDiv{
+  width: 40%;
+}
+
+img{
+  margin: 5px;
+  width: 130px;
+}
+
+h1{
+  width: 100%;
+  text-align: center;
+}
