@@ -1,0 +1,4 @@
+[2022-02-21 19:05:20.510] [sharedprocess] [warning] No ptyHost heartbeat after 6 seconds
+[2022-02-21 19:05:21.489] [sharedprocess] [info] Starting worker process with pid 4881 (type: fileWatcher, window: 1).
+[2022-02-21 19:05:26.180] [sharedprocess] [info] Worker process with pid 4881 terminated normally (type: fileWatcher, window: 1).
+[2022-02-21 19:05:30.306] [sharedprocess] [info] Starting worker process with pid 4912 (type: fileWatcher, window: 1).
