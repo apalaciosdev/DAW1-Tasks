@@ -1,0 +1,21 @@
+<deps>
+
+  <departamento>
+      <numero>1</numero>
+      <nombre>uno</nombre>
+      <localidad>calafell</localidad>
+  </departamento>
+
+  <departamento>
+      <numero>2</numero>
+      <nombre>dos</nombre>
+      <localidad>vendrell</localidad>
+  </departamento>
+
+  <departamento>
+      <numero>3</numero>
+      <nombre>tres</nombre>
+      <localidad>segur</localidad>
+  </departamento>
+
+</deps>
