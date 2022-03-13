@@ -183,7 +183,7 @@ class ExistDBTest():
     def showReport (self, nacionalidadPeli):
         self.db = self.conexionBD()
 
-        #Recogemos la data
+        #Recogemos la data 
         #nota: en algunos splits, el carácter a tener en cuenta es '/' por si hay valores (como el titulo) que contengan espacio
         
         anyo = str(self.db.query("for $peli in doc('/db/APalacios/pelicula.xml')/Pelicules/Pelicula where nacionalidad='" + str(nacionalidadPeli) + "' let $anyo:= data($peli/anyo) return $anyo")).split()
