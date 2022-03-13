@@ -136,20 +136,18 @@ class ExistDBTest():
         anyo = str(self.db.query("for $peli in /Pelicules/Pelicula where nacionalidad='" + str(nacionalidadPeli) + "' let $anyo:= data($peli/anyo) return $anyo")).split()
         titulo = str(self.db.query("for $peli in /Pelicules/Pelicula where nacionalidad='" + str(nacionalidadPeli) + "' let $titulo:= data($peli/titulo) return concat($titulo , '/')")).split('/')
         nacionalidad = str(self.db.query("for $peli in /Pelicules/Pelicula where nacionalidad='" + str(nacionalidadPeli) + "' let $nacionalidad:= data($peli/nacionalidad) return concat($nacionalidad , '/')")).split('/')
-        countPelis = str(self.db.query("count(/Pelicules/Pelicula[nacionalidad='" + str(nacionalidadPeli) + "'])"))
+        countPelis = str(self.db.query("count(doc('/db/APalacios/pelicula.xml')/Pelicules/Pelicula[nacionalidad='" + str(nacionalidadPeli) + "'])"))
            
         taquilla = str(self.db.query("for $peli in /Pelicules/Pelicula where nacionalidad='" + str(nacionalidadPeli) + "' let $taquilla:= data($peli/taquilla) return $taquilla")).split()
-       
+        intTaquilla = [int(float(i)) for i in taquilla] #Convierto el array de taquilla a int para calcular posteriormente
+        
         table = [['Año', 'Titulo', 'Nacionalidad']]
+        table2 = [["Recaudación"], [sum(intTaquilla)]]
        
-        countTotal = int(countPelis)/2
-        dineroTotal = 0
-        for x in range(0, int(countTotal)):
+        for x in range(0, int(countPelis)):
             append = [anyo[x], titulo[x], nacionalidad[x]]
             table.append(append)
-            dineroTotal = dineroTotal + int(float(taquilla[x]))
        
-        table2 = [["Recaudación"], [dineroTotal]]
         
         print(tabulate(table, headers='firstrow', tablefmt='fancy_grid'))
         print(tabulate(table2, headers='firstrow', tablefmt='fancy_grid'))
