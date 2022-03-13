@@ -22,7 +22,7 @@ class ExistDBTest():
         self.db = self.conexionBD()
    
         
-        countDeps = self.db.query("count(/deps/departamento)")
+        countDeps = self.db.query("count(/Pelicules/Pelicula/)")
         numero = str(self.db.query("for $numero in /deps/departamento/numero return $numero")).split() 
         nombre = str(self.db.query("for $nombre in /deps/departamento/nombre return $nombre")).split()
         localidad = str(self.db.query("for $localidad in /deps/departamento/localidad return $localidad")).split()
