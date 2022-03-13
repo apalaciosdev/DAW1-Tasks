@@ -3,10 +3,11 @@ from tabulate import tabulate
 
 class ExistDBTest():
     #Metode Main
-    def __init__(self,user,passw,url):
+    def __init__(self,user,passw,url,urlDestino):
         self.user=user
         self.passw=passw
         self.url=url
+        self.urlDestino=urlDestino
         
         
         while(True): #Mini menú para escoger que función hacer
@@ -25,6 +26,7 @@ class ExistDBTest():
                 break;
                 
             elif choice == 3:
+                self.migrateFilm()
                
                 break;
                 
@@ -42,6 +44,9 @@ class ExistDBTest():
     
     def conexionBD(self):
         return db.ExistDB(server_url=self.url,username=self.user,password=self.passw)
+    
+    def conexionBDDestino(self):
+        return db.ExistDB(server_url=self.urlDestino,username=self.user,password=self.passw)
     
    
             
@@ -103,10 +108,55 @@ class ExistDBTest():
 
         
     
+    def migrateFilm (self):
+        localdb = self.conexionBD()
+  
+        archivosPorMigrar = ["actores", "directores", "ganapremio", "participa", "pelicula", "premio"]
+        
+        for i in range(0, len(archivosPorMigrar)):
+            print("Vuelta " + str(i) + " con valor " + archivosPorMigrar[i])
+            #Creamos fichero local
+            localdb = self.conexionBD()
+            # xqy = "for $peli in doc('/db/APalacios/" + str(archivosPorMigrar[i]) + ".xml') return $peli"
+            xqy = "for $peli in doc('/db/APalacios/pelicula.xml') return $peli"
+            qres = localdb.executeQuery(xqy)
+            if str(qres) == "":
+                print("** LA CONSULTA NO DEVUELVE NADA **")
+            
+            
+            else:
+                print("\n\nCreando fichero en local...")
+                f = open(str(archivosPorMigrar[i]) + ".xml", "w")
+                f.write("<?xml version='1.0' encoding='ISO-8859-1'?> \n")
+            
+                print("Añadiendo datos al fichero...")
+                hits = localdb.getHits(qres)
+                for x in range(hits):
+                    f.write(str(localdb.retrieve(qres, x)) + "\n")
+                f.close()
+            
+            localdb = self.conexionBDDestino() # Nos conectamos a nuestra DB local
+            print("Subiendo fichero a la DB local...")
+            f = open(archivosPorMigrar[i] + ".xml")
+            localdb.load(f.read(), "Zonas20/" + archivosPorMigrar[i] + ".xml")
+            f.close()
+
+            print("\n---Tarea realizada con éxito---\n")
+            
+    
+      
+        
+    
+            
+            
+         
+
+        
+    
     def deletePelicula(self):
         self.db = self.conexionBD()
-       # Imprimimos las peliculas para que el usuario pueda escoger
-       
+        
+        # Imprimimos las peliculas para que el usuario pueda escoger
         pelis = self.db.query("for $peli in doc('/db/APalacios/pelicula.xml')/Pelicules/Pelicula return $peli")
         for x in range(0,len(pelis.results)):
             print (pelis.results[x].xpath('string()'))
@@ -135,6 +185,7 @@ class ExistDBTest():
 
         #Recogemos la data
         #nota: en algunos splits, el carácter a tener en cuenta es '/' por si hay valores (como el titulo) que contengan espacio
+        
         anyo = str(self.db.query("for $peli in doc('/db/APalacios/pelicula.xml')/Pelicules/Pelicula where nacionalidad='" + str(nacionalidadPeli) + "' let $anyo:= data($peli/anyo) return $anyo")).split()
         titulo = str(self.db.query("for $peli in doc('/db/APalacios/pelicula.xml')/Pelicules/Pelicula where nacionalidad='" + str(nacionalidadPeli) + "' let $titulo:= data($peli/titulo) return concat($titulo , '/')")).split('/')
         nacionalidad = str(self.db.query("for $peli in doc('/db/APalacios/pelicula.xml')/Pelicules/Pelicula where nacionalidad='" + str(nacionalidadPeli) + "' let $nacionalidad:= data($peli/nacionalidad) return concat($nacionalidad , '/')")).split('/')
@@ -168,5 +219,5 @@ class ExistDBTest():
         
       
     
-        
-y=ExistDBTest("admin","admin","http://localhost:8080/exist")
+#               user   pass           server Abraham                   Mi server
+y=ExistDBTest("admin","admin","http://localhost:8080/exist", "http://localhost:8080/exist")
