@@ -66,8 +66,8 @@ class ExistDBTest():
         
         
         # Recogemos todos los códigos de género
-        genero = str(self.db.query("for $peli in /Pelicules/Pelicula let $genero:= data($peli/genero) return $genero")).split() 
-        countPelis = str(self.db.query("count(/Pelicules/Pelicula)"))
+        genero = str(self.db.query("for $peli in doc('/db/APalacios/pelicula.xml')/Pelicules/Pelicula let $genero:= data($peli/genero) return $genero")).split() 
+        countPelis = str(self.db.query("count(doc('/db/APalacios/pelicula.xml')/Pelicules/Pelicula)"))
         
         checked = []
         checkedNames = []
@@ -105,20 +105,22 @@ class ExistDBTest():
     
     def deletePelicula(self):
         self.db = self.conexionBD()
-        codPelicula = int(input("Introduce el código de la pelicula que deseas eliminar: "))
-       
        # Imprimimos las peliculas para que el usuario pueda escoger
-        pelis = self.db.query("for $peli in /Pelicules/Pelicula return $peli")
+       
+        pelis = self.db.query("for $peli in doc('/db/APalacios/pelicula.xml')/Pelicules/Pelicula return $peli")
         for x in range(0,len(pelis.results)):
             print (pelis.results[x].xpath('string()'))
   
   
-        countPelis = self.db.query("count(/Pelicules/Pelicula[codpelicula='" + str(codPelicula) + "'])")
+        codPelicula = int(input("Introduce el código de la pelicula que deseas eliminar: "))
+       
+  
+        countPelis = self.db.query("count(doc('/db/APalacios/pelicula.xml')/Pelicules/Pelicula[codpelicula='" + str(codPelicula) + "'])")
         if str(countPelis) == '0':
             print("** No existe la pelicula introducida ** ")
         
         else:  
-            self.db.query("update delete /Pelicules/Pelicula[codpelicula='" + str(codPelicula) + "']")
+            self.db.query("update delete doc('/db/APalacios/pelicula.xml')/Pelicules/Pelicula[codpelicula='" + str(codPelicula) + "']")
             print("\nLa pelicula con codigo " + str(codPelicula) + " ha sido eliminada")
         
         
@@ -133,12 +135,12 @@ class ExistDBTest():
 
         #Recogemos la data
         #nota: en algunos splits, el carácter a tener en cuenta es '/' por si hay valores (como el titulo) que contengan espacio
-        anyo = str(self.db.query("for $peli in /Pelicules/Pelicula where nacionalidad='" + str(nacionalidadPeli) + "' let $anyo:= data($peli/anyo) return $anyo")).split()
-        titulo = str(self.db.query("for $peli in /Pelicules/Pelicula where nacionalidad='" + str(nacionalidadPeli) + "' let $titulo:= data($peli/titulo) return concat($titulo , '/')")).split('/')
-        nacionalidad = str(self.db.query("for $peli in /Pelicules/Pelicula where nacionalidad='" + str(nacionalidadPeli) + "' let $nacionalidad:= data($peli/nacionalidad) return concat($nacionalidad , '/')")).split('/')
+        anyo = str(self.db.query("for $peli in doc('/db/APalacios/pelicula.xml')/Pelicules/Pelicula where nacionalidad='" + str(nacionalidadPeli) + "' let $anyo:= data($peli/anyo) return $anyo")).split()
+        titulo = str(self.db.query("for $peli in doc('/db/APalacios/pelicula.xml')/Pelicules/Pelicula where nacionalidad='" + str(nacionalidadPeli) + "' let $titulo:= data($peli/titulo) return concat($titulo , '/')")).split('/')
+        nacionalidad = str(self.db.query("for $peli in doc('/db/APalacios/pelicula.xml')/Pelicules/Pelicula where nacionalidad='" + str(nacionalidadPeli) + "' let $nacionalidad:= data($peli/nacionalidad) return concat($nacionalidad , '/')")).split('/')
         countPelis = str(self.db.query("count(doc('/db/APalacios/pelicula.xml')/Pelicules/Pelicula[nacionalidad='" + str(nacionalidadPeli) + "'])"))
            
-        taquilla = str(self.db.query("for $peli in /Pelicules/Pelicula where nacionalidad='" + str(nacionalidadPeli) + "' let $taquilla:= data($peli/taquilla) return $taquilla")).split()
+        taquilla = str(self.db.query("for $peli in doc('/db/APalacios/pelicula.xml')/Pelicules/Pelicula where nacionalidad='" + str(nacionalidadPeli) + "' let $taquilla:= data($peli/taquilla) return $taquilla")).split()
         intTaquilla = [int(float(i)) for i in taquilla] #Convierto el array de taquilla a int para calcular posteriormente
         
         table = [['Año', 'Titulo', 'Nacionalidad']]
