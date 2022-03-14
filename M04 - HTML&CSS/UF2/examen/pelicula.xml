@@ -1,0 +1,87 @@
+<Pelicules>
+
+  <Pelicula>
+    <codpelicula>3</codpelicula>
+    <titulo>31 dias</titulo>
+    <anyo>2000</anyo>
+    <nacionalidad>Estados Unidos</nacionalidad>
+    <duracion>145.0</duracion>
+    <fechaestreno>2001-03-22 23:00:00</fechaestreno>
+    <genero>1</genero>
+    <taquilla>1103731.95</taquilla>
+    <productora>Beacon Pictures</productora>
+    <distribuidora>Manga Films S.L.</distribuidora>
+    <director>6</director>
+  </Pelicula>
+
+  <Pelicula>
+    <codpelicula>4</codpelicula>
+    <titulo>El hijo de la novia</titulo>
+    <anyo>2001</anyo>
+    <nacionalidad>España Argentina</nacionalidad>
+    <duracion>124.0</duracion>
+    <fechaestreno>2001-11-22 23:00:00</fechaestreno>
+    <genero>2</genero>
+    <taquilla>7230415.69</taquilla>
+    <productora>Tornasol Films, S.A.</productora>
+    <distribuidora>Alta Classics S.L.</distribuidora>
+    <director>5</director>
+  </Pelicula>
+
+  <Pelicula>
+    <codpelicula>5</codpelicula>
+    <titulo>El Señor de los Anillos. La Comunidad del Anillo</titulo>
+    <anyo>2001</anyo>
+    <nacionalidad>Nueva Zelanda</nacionalidad>
+    <duracion>180.0</duracion>
+    <fechaestreno>2001-12-18 23:00:00</fechaestreno>
+    <genero>3</genero>
+    <taquilla>31263314.97</taquilla>
+    <productora>Wingnut Films</productora>
+    <distribuidora>Aurum Producciones S.A.</distribuidora>
+    <director>7</director>
+  </Pelicula>
+
+  <Pelicula>
+    <codpelicula>6</codpelicula>
+    <titulo>Mar Adentro</titulo>
+    <anyo>2004</anyo>
+    <nacionalidad>España</nacionalidad>
+    <duracion>105.0</duracion>
+    <fechaestreno>2004-09-02 22:00:00</fechaestreno>
+    <genero>2</genero>
+    <taquilla>21469765.482</taquilla>
+    <productora>SOGECINE</productora>
+    <distribuidora>SOGEPAQ S.A.</distribuidora>
+    <director>3</director>
+  </Pelicula>
+
+  <Pelicula>
+    <codpelicula>7</codpelicula>
+    <titulo>Casablanca</titulo>
+    <anyo>1942</anyo>
+    <nacionalidad>Estados Unidos</nacionalidad>
+    <duracion>108.0</duracion>
+    <fechaestreno>1946-12-18 23:00:00</fechaestreno>
+    <genero>5</genero>
+    <taquilla>318310.24</taquilla>
+    <productora>Warner Bros Pictures</productora>
+    <distribuidora>C.B. Fimls S.A.</distribuidora>
+    <director>8</director>
+  </Pelicula>
+
+  <Pelicula>
+    <codpelicula>8</codpelicula>
+    <titulo>El Bola</titulo>
+    <anyo>2000</anyo>
+    <nacionalidad>España</nacionalidad>
+    <duracion>98.0</duracion>
+    <fechaestreno>2000-10-19 22:00:00</fechaestreno>
+    <genero>5</genero>
+    <taquilla>3298489.172</taquilla>
+    <productora>Tesela Producciones Cinematográficas</productora>
+    <distribuidora>Wanda Vision, S.A.</distribuidora>
+    <director>1</director>
+  </Pelicula>
+
+</Pelicules>
