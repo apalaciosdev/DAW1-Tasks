@@ -1,0 +1,136 @@
+{
+  "EMPLEADOS": {
+    "TITULO": "DATOS DE LA TABLA EMPLE",
+    "EMP_ROW": [
+      {
+        "EMP_NO": "7369",
+        "APELLIDO": "SANCHEZ",
+        "OFICIO": "EMPLEADO",
+        "DIR": "7902",
+        "FECHA_ALT": "1990-12-17",
+        "SALARIO": "1040",
+        "DEPT_NO": "20"
+      },
+      {
+        "EMP_NO": "7499",
+        "APELLIDO": "ARROYO",
+        "OFICIO": "VENDEDOR",
+        "DIR": "7698",
+        "FECHA_ALT": "1990-02-20",
+        "SALARIO": "1500",
+        "COMISION": "390",
+        "DEPT_NO": "30"
+      },
+      {
+        "EMP_NO": "7521",
+        "APELLIDO": "SALA",
+        "OFICIO": "VENDEDOR",
+        "DIR": "7698",
+        "FECHA_ALT": "1991-02-22",
+        "SALARIO": "1625",
+        "COMISION": "650",
+        "DEPT_NO": "30"
+      },
+      {
+        "EMP_NO": "7566",
+        "APELLIDO": "JIMENEZ",
+        "OFICIO": "DIRECTOR",
+        "DIR": "7839",
+        "FECHA_ALT": "1991-04-02",
+        "SALARIO": "2900",
+        "DEPT_NO": "20"
+      },
+      {
+        "EMP_NO": "7654",
+        "APELLIDO": "MARTIN",
+        "OFICIO": "VENDEDOR",
+        "DIR": "7698",
+        "FECHA_ALT": "1991-09-29",
+        "SALARIO": "1600",
+        "COMISION": "1020",
+        "DEPT_NO": "30"
+      },
+      {
+        "EMP_NO": "7698",
+        "APELLIDO": "NEGRO",
+        "OFICIO": "DIRECTOR",
+        "DIR": "7839",
+        "FECHA_ALT": "1991-05-01",
+        "SALARIO": "3005",
+        "DEPT_NO": "30"
+      },
+      {
+        "EMP_NO": "7782",
+        "APELLIDO": "CEREZO",
+        "OFICIO": "DIRECTOR",
+        "DIR": "7839",
+        "FECHA_ALT": "1991-06-09",
+        "SALARIO": "2885",
+        "DEPT_NO": "10"
+      },
+      {
+        "EMP_NO": "7788",
+        "APELLIDO": "GIL",
+        "OFICIO": "ANALISTA",
+        "DIR": "7566",
+        "FECHA_ALT": "1991-11-09",
+        "SALARIO": "3000",
+        "DEPT_NO": "20"
+      },
+      {
+        "EMP_NO": "7839",
+        "APELLIDO": "REY",
+        "OFICIO": "PRESIDENTE",
+        "FECHA_ALT": "1991-11-17",
+        "SALARIO": "4100",
+        "DEPT_NO": "10"
+      },
+      {
+        "EMP_NO": "7844",
+        "APELLIDO": "TOVAR",
+        "OFICIO": "VENDEDOR",
+        "DIR": "7698",
+        "FECHA_ALT": "1991-09-08",
+        "SALARIO": "1350",
+        "COMISION": "0",
+        "DEPT_NO": "30"
+      },
+      {
+        "EMP_NO": "7876",
+        "APELLIDO": "ALONSO",
+        "OFICIO": "EMPLEADO",
+        "DIR": "7788",
+        "FECHA_ALT": "1991-09-23",
+        "SALARIO": "1430",
+        "DEPT_NO": "20"
+      },
+      {
+        "EMP_NO": "7900",
+        "APELLIDO": "JIMENO",
+        "OFICIO": "EMPLEADO",
+        "DIR": "7698",
+        "FECHA_ALT": "1991-12-03",
+        "SALARIO": "1335",
+        "DEPT_NO": "30"
+      },
+      {
+        "EMP_NO": "7902",
+        "APELLIDO": "FERNANDEZ",
+        "OFICIO": "ANALISTA",
+        "DIR": "7566",
+        "FECHA_ALT": "1991-12-03",
+        "SALARIO": "3000",
+        "DEPT_NO": "20"
+      },
+      {
+        "EMP_NO": "7934",
+        "APELLIDO": "MUÑOZ",
+        "OFICIO": "EMPLEADO",
+        "DIR": "7782",
+        "FECHA_ALT": "1992-01-23",
+        "SALARIO": "1690",
+        "DEPT_NO": "10"
+      }
+    ]
+  }
+}

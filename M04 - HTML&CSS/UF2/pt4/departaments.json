@@ -1,0 +1,27 @@
+{
+    "departamentos": {
+        "TITULO": "DATOS DE LA TABLA DEPART",
+        "DEP_ROW": [
+            {
+                "DEPT_NO": "10",
+                "DNOMBRE": "CONTABILIDAD",
+                "LOC": "SEVILLA"
+            },
+            {
+                "DEPT_NO": "20",
+                "DNOMBRE": "INVESTIGACION",
+                "LOC": "MADRID"
+            },
+            {
+                "DEPT_NO": "30",
+                "DNOMBRE": "VENTAS",
+                "LOC": "BARCELONA"
+            },
+            {
+                "DEPT_NO": "40",
+                "DNOMBRE": "PRODUCCION",
+                "LOC": "BILBAO"
+            }
+        ]
+    }
+}
