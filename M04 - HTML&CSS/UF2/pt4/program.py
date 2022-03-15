@@ -10,10 +10,10 @@ collection = db.deps
 
 def menu():
   while True:  # Mini menú para escoger que función hacer
-    print("1.- Ver empleados\n",
-      "2.- Insertar un departamento\n",
-      "3.- Hacer migración de archivos\n",
-      "4.- Mostrar información de las películas categorizadas por nacionalidad",
+    print(" 1.- Ver empleados del fichero JSON\n",
+      "2.- Insertar un departamento de la DB\n",
+      "3.- Eliminar un departamento de la DB\n",
+      "4.- Actualizar un departamento de la DB",
     )
     
     choice = int(input("\nSelecciona una opción [1-4]: "))
@@ -23,21 +23,23 @@ def menu():
       break
 
     elif choice == 2:
-      insertaDep()
+      Insertadep()
       break
 
     elif choice == 3:
-      # migrateFilm()
+      Borradep()
       break
 
     elif choice == 4:
-      # showReport(nacionality)
+      Modificadep()
       break
 
     else:
         print("\n=====================================================")
         print("ERROR, opción seleccionada no válida. Prueba de nuevo")
         print("=====================================================\n")
+
+
 
 
 def verEmple():
@@ -61,7 +63,8 @@ def verEmple():
 
 
 
-def insertaDep():
+
+def Insertadep():
   dep = input("Introduce el número del nuevo departamento: ")
   depName = input("Introduce el nombre del nuevo departamento: ")
   depDir = input("Introduce la dirección del nuevo departamento: ")
@@ -72,12 +75,11 @@ def insertaDep():
   f.close()
   
   for i in empjson['EMPLEADOS']['EMP_ROW']:
-    if(i['DEPT_NO'] in checkedDeps): # Comprobamos si el genero ya se ha utilizado
+    if(i['DEPT_NO'] in checkedDeps): 
       pass
     
     else:
       checkedDeps.append(i['DEPT_NO'])
-    
     
     
   if(i['DEPT_NO'] == dep):
@@ -85,15 +87,54 @@ def insertaDep():
   
   else:
     newEntry = {
-      "name": dep,
-      "eid": depName,
-      "location": depDir
+      "DEPT_NO": dep,
+      "DNOMBRE": depName,
+      "LOC": depDir
     }
       
     # Insert Data
     collection.insert_one(newEntry)
     
+    print("\n¡Departamento insertado con éxito!")
+    
     
 
+  
+
+
+def Borradep():
+  dep = input("Introduce el número del departamento que deseas eliminar: ")
+  
+  depExists = collection.count_documents({ "DEPT_NO": dep }) > 0  #Comprobamos si el departamento existe o no
+  
+  if(depExists):
+    collection.delete_many({ "DEPT_NO": dep })
+    
+    print("\n¡Departamento eliminado con éxito!")
+  
+  else:
+    print("El departamento que deseas eliminar no existe")
+
+    
+
+# TODO: convertir dep a int
+
+def Modificadep():
+  dep = input("Introduce el número del departamento que deseas modificar: ")
+  
+  depExists = collection.count_documents( { "DEPT_NO": dep} ) > 0  #Comprobamos si el departamento existe o no
+  
+  if(depExists):
+    newDep = input("Introduce el nuevo número del departamento: ")
+    newName = input("Introduce el nuevo nombre del departamento: ")
+    newLoc = input("Introduce la nueva localización del departamento: ")
+    
+    collection.update_many({ "DEPT_NO": dep }, { "$set":{ "DEPT_NO": newDep,  "DNOMBRE": newName, "LOC": newLoc }})
+    
+    print("\n¡Departamento modificado con éxito!")
+  
+  else:
+    print("El departamento que deseas modificar no existe")
+  
 
 menu()
