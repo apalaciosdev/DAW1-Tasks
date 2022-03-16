@@ -92,7 +92,6 @@ def Insertadep():
       "LOC": depDir
     }
       
-    # Insert Data
     collection.insert_one(newEntry)
     
     print("\n¡Departamento insertado con éxito!")
@@ -117,7 +116,7 @@ def Borradep():
 
     
 
-# TODO: convertir dep a int
+
 
 def Modificadep():
   dep = input("Introduce el número del departamento que deseas modificar: ")

@@ -190,7 +190,7 @@ class ExistDBTest():
 
         #Recogemos la data
         #nota: en algunos splits, el carácter a tener en cuenta es '/' por si hay valores (como el titulo) que contengan espacio
-        
+        # print(self.db.getDocument('/db/APalacios/pelicula.xml'))
         countPelis = 0
         table = [['Año', 'Titulo', 'Nacionalidad']]
         
