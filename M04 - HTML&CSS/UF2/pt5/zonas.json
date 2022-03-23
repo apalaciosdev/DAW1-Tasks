@@ -1,0 +1,21 @@
+{
+  "zonas": {
+    "zona": [
+      {
+        "cod_zona": "222",
+        "nombre": "BARCELONA",
+        "director": "XAVI"
+      },
+      {
+        "cod_zona": "333",
+        "nombre": "ROMA",
+        "director": "MOURINHO"
+      },
+      {
+        "cod_zona": "444",
+        "nombre": "PARIS",
+        "director": "POCHETTINO"
+      }
+    ]
+  }
+}

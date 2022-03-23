@@ -1,0 +1,30 @@
+{
+  "productos": {
+    "produc": [
+      {
+        "cod_prod": "1234",
+        "denominacion": "ESPAÑOLA",
+        "precio": "10",
+        "stock_actual": "1000",
+        "stock_minimo": "250",
+        "cod_zona": "222"
+      },
+      {
+        "cod_prod": "1235",
+        "denominacion": "ITALIANA",
+        "precio": "23",
+        "stock_actual": "300",
+        "stock_minimo": "150",
+        "cod_zona": "333"
+      },
+      {
+        "cod_prod": "1236",
+        "denominacion": "FRANCHUTESA",
+        "precio": "10",
+        "stock_actual": "12000",
+        "stock_minimo": "600",
+        "cod_zona": "444"
+      }
+    ]
+  }
+}
