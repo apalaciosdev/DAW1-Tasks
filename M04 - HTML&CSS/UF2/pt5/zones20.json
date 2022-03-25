@@ -1,0 +1,14 @@
+{
+    "productos": {
+        "produc": [
+            {
+                "cod_prod": "1235",
+                "denominacion": "ITALIANA",
+                "precio": "23",
+                "nombre_zona": "ROMA",
+                "director": "MOURINHO",
+                "stock": 150
+            }
+        ]
+    }
+}

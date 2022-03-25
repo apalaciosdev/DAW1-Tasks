@@ -2,17 +2,17 @@
   "zonas": {
     "zona": [
       {
-        "cod_zona": "222",
+        "cod_zona": "10",
         "nombre": "BARCELONA",
         "director": "XAVI"
       },
       {
-        "cod_zona": "333",
+        "cod_zona": "20",
         "nombre": "ROMA",
         "director": "MOURINHO"
       },
       {
-        "cod_zona": "444",
+        "cod_zona": "30",
         "nombre": "PARIS",
         "director": "POCHETTINO"
       }
