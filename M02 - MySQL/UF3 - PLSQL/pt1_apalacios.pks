@@ -13,7 +13,7 @@ CREATE OR REPLACE PROCEDURE pelisNetflix
         
         SELECT COUNT(DISTINCT REFSERIE) INTO countPelis FROM VISUALITZACIONS;
 
-        IF countPelis <= 2 THEN
+        IF countPelis <= 3 THEN
             raise_application_error(-20109, 'Hay menos de 4 series que hayan sido vistas');
         
         ELSE
