@@ -1,0 +1,44 @@
+{
+  "equipos_de_futbol": {
+    "equipo": [
+      {
+        "nombre": "Levante",
+        "ciudad": "Valencia",
+        "entrenador": "Joan",
+        "jugadores": {
+          "jugador": [
+            {
+              "posicion": "portero",
+              "nombre": "Javier Jimenez",
+              "nacionalidad": "spain"
+            },
+            {
+              "posicion": "delantero",
+              "nombre": "Nong",
+              "nacionalidad": "cameroun"
+            }
+          ]
+        }
+      },
+      {
+        "nombre": "Real Sociedad",
+        "ciudad": "San Sebastian",
+        "entrenador": "Eusebio",
+        "jugadores": {
+          "jugador": [
+            {
+              "posicion": "portero",
+              "nombre": "Claudio Bravo",
+              "nacionalidad": "chile"
+            },
+            {
+              "posicion": "defensa",
+              "nombre": "Mikel Gonzalez",
+              "nacionalidad": "spain"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
