@@ -1,6 +1,7 @@
 {
   "java.project.sourcePaths": [
-    "M03 -JAVA/UF2/pt1"
+    "M03 -JAVA/UF2/pt1",
+    "M03 -JAVA/UF2/pt2"
   ],
   "python.formatting.provider": "black"
 }
