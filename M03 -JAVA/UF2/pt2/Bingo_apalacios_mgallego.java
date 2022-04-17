@@ -9,26 +9,25 @@ public class Bingo_apalacios_mgallego {
 
   public static void main(String[] args) throws Exception {
 
-    System.out.println("\n\n---------------- BINGO ANTOJITOS ----------------");
-
+    
     int num = 0;
     boolean bucle = true;
-
-    System.out.println("1- Generar solo cartones");
-    System.out.println("2- Generar solo bombo");
-    System.out.println("3- Generar cartones y bombo");
-    System.out.println("4- Salir");
-
+    
     while (bucle) {
+      System.out.println("\n\n---------------- BINGO ANTOJITOS ----------------");
+      System.out.println("1- Generar solo cartones");
+      System.out.println("2- Generar solo bombo");
+      System.out.println("3- Generar cartones y bombo (modo manual)");
+      System.out.println("4- Generar cartones y bombo (modo automático)");
+      System.out.println("5- Salir");
       System.out.println("");
       System.out.println("Introduce número: ");
       num = sc.nextInt();
       
 
       if (num == 1) {
-        String todosCartones[][][] = guardar_arrays_en_array_tridimensional();
-        
-        veure_array_string_tridimensional(todosCartones);
+        String todosCartones[][][] = guardarCartones();
+        verTodosLosCartones(todosCartones);
       }
 
       else if (num == 2) {
@@ -36,10 +35,10 @@ public class Bingo_apalacios_mgallego {
       }
 
       else if (num == 3) {
-        crearAmbos();
+        juegoManual();
       }
 
-      else if (num == 4) {
+      else if (num == 5) {
         bucle = false;
       }
 
@@ -896,19 +895,17 @@ public class Bingo_apalacios_mgallego {
   }
 
 
-  public static String[][][] guardar_arrays_en_array_tridimensional(){
-
-    Scanner input = new Scanner(System.in);
+  public static String[][][] guardarCartones(){
 
     System.out.print("\n\nIntroduce la cantidad de cartones que deseas generar: ");
-    int quantitat_jugadors = input.nextInt();
+    int quantitat_jugadors = sc.nextInt();
 
     String array[][][] = new String[quantitat_jugadors][3][9];
 
     
     
     for (int i = 0; i < array.length; i++) {
-        String cartro_final[][] = convertir_array_de_int_a_String(crearUnCarton());
+        String cartro_final[][] = conversorIntToStringArray(crearUnCarton());
         for (int j = 0; j < array[i].length; j++) {
             for (int k = 0; k < array[i][j].length; k++) {
                 array[i][j][k] = cartro_final[j][k];
@@ -920,7 +917,7 @@ public class Bingo_apalacios_mgallego {
   }
 
 
-  public static String[][] convertir_array_de_int_a_String(int[][] array) {
+  public static String[][] conversorIntToStringArray(int[][] array) {
 
     String array_string[][] = new String[3][9];
 
@@ -945,7 +942,7 @@ public class Bingo_apalacios_mgallego {
   }
 
 
-  public static void veure_array_string_tridimensional(String[][][] array){
+  public static void verTodosLosCartones(String[][][] array){
     for (int i = 0; i < array.length; i++) {
         System.out.print("\n----------------------------------------------\n");
         for (int j = 0; j < array[i].length; j++) {
@@ -956,15 +953,37 @@ public class Bingo_apalacios_mgallego {
             System.out.println("\n----------------------------------------------");
         }
     }
+    System.out.println("\n\n\n");
+  }
+
+
+  public static String[][][] tacharCarton(String[][][] array, int num) {
+    String numero = String.valueOf(num);
+    for (int i = 0; i < array.length; i++) {
+        for (int j = 0; j < array[i].length; j++) {
+            for (int k = 0; k < array[i][j].length; k++) {
+                if (array[i][j][k].equals(numero)){
+                    array[i][j][k] = "XX";
+                }
+                else if (array[i][j][k].equals(" "+numero)){
+                    array[i][j][k] = "XX";
+                }
+            }
+        }
+    }
+    return array;
 }
 
 
   public static void crearBombo() {
     ArrayList<Integer> numerosMostrados = new ArrayList<Integer>();
-    System.out.print("Si deseas salir de este modo, escribe exit ");
+    System.out.print("\n-------------------------------------------\n");
+    System.out.print("Si deseas salir de este modo, escribe exit.");
+    System.out.print("\nEn caso contrario, pulsa enter.\n");
+    System.out.print("-------------------------------------------\n\n");
 
     boolean state = true;
-
+    sc.nextLine();
     while (state) {
       int randomNumber = (int) Math.floor(Math.random() * (90 - 1 + 1)) + 1;
       
@@ -972,11 +991,10 @@ public class Bingo_apalacios_mgallego {
         randomNumber = (int) Math.floor(Math.random() * (90 - 1 + 1)) + 1;
       }
 
-      System.out.println(randomNumber);
+      System.out.println("     || " + randomNumber + " ||\n");
       
       numerosMostrados.add(randomNumber);
 
-      System.out.print("Pulsa cualquier tecla para mostrar el siguiente número: ");
       String bingo = sc.nextLine().toLowerCase();
       System.out.print("\n");
       
@@ -986,7 +1004,124 @@ public class Bingo_apalacios_mgallego {
     }
   }
 
-  public static void crearAmbos() {
+  public static void juegoManual() {
+    String todosCartones[][][] = guardarCartones();
+    verTodosLosCartones(todosCartones);
+   
+    ArrayList<Integer> numerosIntroducidos = new ArrayList<Integer>();
+    boolean state = true;
+    int numeroIntroducido = 0;
+    int contador_general = 0;
+    int contador_general1 = 0;
+    int hayLinea = 0;
+    int hayBingo = 0;
+    int linea = 0;
+
+    while(state){
+      System.out.println("\n\nIntroduce un número (1-90)");
+      numeroIntroducido = sc.nextInt();
+
+      while(numerosIntroducidos.contains(numeroIntroducido) || numeroIntroducido < 1 || numeroIntroducido > 90){
+        if(numerosIntroducidos.contains(numeroIntroducido)){
+          System.out.println("\n-------ERROR, NÚMERO YA USADO-------");
+          
+          System.out.println("Introduce un número (1-90)");
+          numeroIntroducido = sc.nextInt();
+        }
+        
+        else{
+          System.out.println("\n-------ERROR, NÚMERO NO VÁLIDO-------");
+          
+          System.out.println("Introduce un número (1-90)");
+          numeroIntroducido = sc.nextInt();
+        }
+
+      }
+     
+      numerosIntroducidos.add(numeroIntroducido);
+   
+      String cartonTachado [][][] = tacharCarton(todosCartones, numeroIntroducido);
+  
+      for (int i = 0; i < cartonTachado.length; i++) {
+        int linea1 = 0;
+        int linea2 = 0;
+        int linea3 = 0;
+        int bingoContador = 0;
+  
+        System.out.print("\n---------------------------------------------\n");
+        for (int j = 0; j < cartonTachado[i].length; j++) {
+            System.out.print("| ");
+            
+            for (int k = 0; k < cartonTachado[i][j].length; k++) {  
+              if (j == 0){ //Primera fila
+                if (cartonTachado[i][j][k].equals("XX")){
+                    linea1++;
+                    bingoContador++;
+                    
+                    if (linea1 == 5){
+                        hayLinea = i;
+                        linea = j;
+                    }
+                    
+                    if (bingoContador == 15){
+                        hayBingo = i;
+                    }
+                }
+              }
+
+              if (j == 1){ //Segunda fila
+                if (cartonTachado[i][j][k].equals("XX")){
+                    linea2++;
+                    bingoContador++;
+
+                    if (linea2 == 5){
+                        hayLinea = i;
+                        linea = j;
+                    }
+                    
+                    if (bingoContador == 15){
+                        hayBingo = i;
+                    }
+                }
+              }
+
+              if (j == 2){ //Tercera fila
+                if (cartonTachado[i][j][k].equals("XX")){
+                    linea3++;
+                    bingoContador++;
+                    
+                    if (linea3 == 5){
+                        hayLinea = i;
+                        linea = j;
+                    }
+                    
+                    if (bingoContador == 15){
+                        hayBingo = i;
+                    }
+                }
+              }
+              System.out.print(cartonTachado[i][j][k]+ " | ");
+            }
+            System.out.println("\n---------------------------------------------");
+        }
+
+        if (contador_general < 1){
+          if (linea1 == 5 || linea2 == 5 || linea3 == 5){
+              printLinea(hayLinea, linea);                                         
+              contador_general++;
+          }
+        }
+
+        if (contador_general1 < 1){
+          if (bingoContador == 15){
+              printBingo(hayBingo);                                                       
+              contador_general1++;
+              state = false;
+          }
+        } 
+      }
+    }
+
 
   }
 
@@ -1011,6 +1146,55 @@ public class Bingo_apalacios_mgallego {
       }
 
     }
+  }
+
+
+  public static void printLinea(int jugador, int linea){
+    System.out.println("\n\n\n██╗     ██╗███╗   ██╗███████╗ █████╗     ██╗");
+    System.out.println("██║     ██║████╗  ██║██╔════╝██╔══██╗    ██║");
+    System.out.println("██║     ██║██╔██╗ ██║█████╗  ███████║    ██║");
+    System.out.println("██║     ██║██║╚██╗██║██╔══╝  ██╔══██║    ╚═╝");
+    System.out.println("███████╗██║██║ ╚████║███████╗██║  ██║    ██╗");
+    System.out.println("╚══════╝╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝    ╚═╝");
+
+    System.out.println("\n---------------------------------");
+    System.out.println("|  El jugador "+(jugador+1)+" ha hecho LINEA   |");
+    System.out.println("---------------------------------");
+    System.out.print("\n");
+  }
+
+
+  public static void printBingo(int jugador){
+    System.out.print("\n");
+    System.out.println("\n\n\n");
+    System.out.println("░░░░░░░░░░░░░░░░░░░░░░█████████");
+    System.out.println("░░███████░░░░░░░░░░███▒▒▒▒▒▒▒▒███");
+    System.out.println("░░█▒▒▒▒▒▒█░░░░░░░███▒▒▒▒▒▒▒▒▒▒▒▒▒███");
+    System.out.println("░░░█▒▒▒▒▒▒█░░░░██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██");
+    System.out.println("░░░░█▒▒▒▒▒█░░░██▒▒▒▒▒██▒▒▒▒▒▒██▒▒▒▒▒███");
+    System.out.println("░░░░░█▒▒▒█░░░█▒▒▒▒▒▒████▒▒▒▒████▒▒▒▒▒▒██");
+    System.out.println("░░░█████████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██");
+    System.out.println("░░░█▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒██");
+    System.out.println("░██▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒██▒▒▒▒▒▒▒▒▒▒██▒▒▒▒██");
+    System.out.println("██▒▒▒███████████▒▒▒▒▒██▒▒▒▒▒▒▒▒██▒▒▒▒▒██");
+    System.out.println("█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒████████▒▒▒▒▒▒▒██");
+    System.out.println("██▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██");
+    System.out.println("░█▒▒▒███████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██");
+    System.out.println("░██▒▒▒▒▒▒▒▒▒▒████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█");
+    System.out.println("░░████████████░░░█████████████████");
+
+
+    System.out.println("\n██████╗ ██╗███╗   ██╗ ██████╗  ██████╗     ██╗");
+    System.out.println("██╔══██╗██║████╗  ██║██╔════╝ ██╔═══██╗    ██║");
+    System.out.println("██████╔╝██║██╔██╗ ██║██║  ███╗██║   ██║    ██║");
+    System.out.println("██╔══██╗██║██║╚██╗██║██║   ██║██║   ██║    ╚═╝");
+    System.out.println("██████╔╝██║██║ ╚████║╚██████╔╝╚██████╔╝    ██╗");
+    System.out.println("╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝  ╚═════╝     ╚═╝");
+
+    System.out.println("\n---------------------------------");
+    System.out.println("|  El jugador "+(jugador+1)+" ha hecho BINGO   |");
+    System.out.println("---------------------------------");
+    System.out.print("\n");
   }
 
 }
