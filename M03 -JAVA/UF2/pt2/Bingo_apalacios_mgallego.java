@@ -6,7 +6,6 @@ public class Bingo_apalacios_mgallego {
 
   public static Scanner sc = new Scanner(System.in, "UTF-8");
   public static int carton[][] = new int[3][9]; // horizonal(fila)[j] - vertical(columna)[i]
-  public static ArrayList<int[][]> cartones = new ArrayList<int[][]>();
 
   public static void main(String[] args) throws Exception {
 
@@ -385,31 +384,6 @@ public class Bingo_apalacios_mgallego {
         }
       }
     }
-
-    /*
-     * System.out.println("\n\n\n--RESULTADO FINAL--");
-     * for (int i = 0; i < 3; i++) {
-     * System.out.println("");
-     * for (int j = 0; j < 9; j++) {
-     * switch (i) {
-     * case 0:
-     * min = 1;
-     * max = 10;
-     * break;
-     * case 1:
-     * min = 1;
-     * max = 10;
-     * break;
-     * 
-     * 
-     * 
-     * default:
-     * break;
-     * }
-     * System.out.print(carton[i][j] + " ");
-     * }
-     * }
-     */
   }
 
   public static boolean validarCarton() {
@@ -986,12 +960,37 @@ public class Bingo_apalacios_mgallego {
 
 
   public static void crearBombo() {
+    ArrayList<Integer> numerosMostrados = new ArrayList<Integer>();
+    System.out.print("Si deseas salir de este modo, escribe exit ");
 
+    boolean state = true;
+
+    while (state) {
+      int randomNumber = (int) Math.floor(Math.random() * (90 - 1 + 1)) + 1;
+      
+      while(numerosMostrados.contains(randomNumber)){
+        randomNumber = (int) Math.floor(Math.random() * (90 - 1 + 1)) + 1;
+      }
+
+      System.out.println(randomNumber);
+      
+      numerosMostrados.add(randomNumber);
+
+      System.out.print("Pulsa cualquier tecla para mostrar el siguiente número: ");
+      String bingo = sc.nextLine().toLowerCase();
+      System.out.print("\n");
+      
+      if (bingo.equalsIgnoreCase("exit")){
+        state = false;
+      }
+    }
   }
 
   public static void crearAmbos() {
 
   }
+
+
 
   public static void printarCarton() {
     /* PRINTAR CARTÓN */
