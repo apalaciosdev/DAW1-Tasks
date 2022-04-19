@@ -14,7 +14,7 @@ public class Bingo_apalacios_mgallego {
     boolean bucle = true;
     
     while (bucle) {
-      System.out.println("\n\n---------------- BINGO ANTOJITOS ----------------");
+      System.out.println("\n\n\n\n---------------- BINGO ANTOJITOS ----------------");
       System.out.println("1- Generar solo cartones");
       System.out.println("2- Generar solo bombo");
       System.out.println("3- Generar cartones y bombo (modo manual)");
@@ -38,6 +38,10 @@ public class Bingo_apalacios_mgallego {
         juegoManual();
       }
 
+      else if (num == 4) {
+        juegoAutomatico();
+      }
+
       else if (num == 5) {
         bucle = false;
       }
@@ -47,7 +51,7 @@ public class Bingo_apalacios_mgallego {
       }
     }
 
-    System.out.println("\n\n---------------- MUCHAS GRACIAS POR JUGAR ----------------");
+    System.out.println("\n\n-------------------- MUCHAS GRACIAS POR JUGAR --------------------");
     System.out.println("----------------- Marc Gallego || Aaron Palacios  -----------------");
   }
 
@@ -1039,6 +1043,116 @@ public class Bingo_apalacios_mgallego {
       }
      
       numerosIntroducidos.add(numeroIntroducido);
+   
+      String cartonTachado [][][] = tacharCarton(todosCartones, numeroIntroducido);
+  
+      for (int i = 0; i < cartonTachado.length; i++) {
+        int linea1 = 0;
+        int linea2 = 0;
+        int linea3 = 0;
+        int bingoContador = 0;
+  
+        System.out.print("\n---------------------------------------------\n");
+        for (int j = 0; j < cartonTachado[i].length; j++) {
+            System.out.print("| ");
+            
+            for (int k = 0; k < cartonTachado[i][j].length; k++) {  
+              if (j == 0){ //Primera fila
+                if (cartonTachado[i][j][k].equals("XX")){
+                    linea1++;
+                    bingoContador++;
+                    
+                    if (linea1 == 5){
+                        hayLinea = i;
+                        linea = j;
+                    }
+                    
+                    if (bingoContador == 15){
+                        hayBingo = i;
+                    }
+                }
+              }
+
+              if (j == 1){ //Segunda fila
+                if (cartonTachado[i][j][k].equals("XX")){
+                    linea2++;
+                    bingoContador++;
+
+                    if (linea2 == 5){
+                        hayLinea = i;
+                        linea = j;
+                    }
+                    
+                    if (bingoContador == 15){
+                        hayBingo = i;
+                    }
+                }
+              }
+
+              if (j == 2){ //Tercera fila
+                if (cartonTachado[i][j][k].equals("XX")){
+                    linea3++;
+                    bingoContador++;
+                    
+                    if (linea3 == 5){
+                        hayLinea = i;
+                        linea = j;
+                    }
+                    
+                    if (bingoContador == 15){
+                        hayBingo = i;
+                    }
+                }
+              }
+              System.out.print(cartonTachado[i][j][k]+ " | ");
+            }
+            System.out.println("\n---------------------------------------------");
+        }
+
+        if (contador_general < 1){
+          if (linea1 == 5 || linea2 == 5 || linea3 == 5){
+              printLinea(hayLinea, linea);                                         
+              contador_general++;
+          }
+        }
+
+        if (contador_general1 < 1){
+          if (bingoContador == 15){
+              printBingo(hayBingo);                                                       
+              contador_general1++;
+              state = false;
+          }
+        } 
+      }
+    }
+
+
+  }
+
+
+  
+  public static void juegoAutomatico() {
+    String todosCartones[][][] = guardarCartones();
+    verTodosLosCartones(todosCartones);
+    ArrayList<Integer> numerosIntroducidos = new ArrayList<Integer>();
+    boolean state = true;
+    int numeroIntroducido = 0;
+    int contador_general = 0;
+    int contador_general1 = 0;
+    int hayLinea = 0;
+    int hayBingo = 0;
+    int linea = 0;
+
+    while(state){
+
+      numeroIntroducido = (int) Math.floor(Math.random() * (90 - 1 + 1)) + 1;
+      
+      while(numerosIntroducidos.contains(numeroIntroducido)){
+        numeroIntroducido = (int) Math.floor(Math.random() * (90 - 1 + 1)) + 1;
+      }
+      numerosIntroducidos.add(numeroIntroducido);
+
+      System.out.println("\n\n\n\n ------ Ha salido el número " + numeroIntroducido + " ------");
    
       String cartonTachado [][][] = tacharCarton(todosCartones, numeroIntroducido);
   
