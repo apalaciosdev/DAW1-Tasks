@@ -1,6 +1,7 @@
 import java.util.*;
 import java.lang.*;
 import java.lang.Math;
+import java.util.InputMismatchException; 
 
 public class Bingo_apalacios_mgallego {
 
@@ -85,8 +86,6 @@ public class Bingo_apalacios_mgallego {
     int contCero = 4;
     int contCero2 = 4;
     int contCero3 = 4;
-
-    int numeroRandom = (int) Math.floor(Math.random() * (1 - 0 + 1) + 0);
 
     for (int i = 0; i < 3; i++) {
       for (int j = 0; j < 9; j++) {
