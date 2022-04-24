@@ -76,13 +76,20 @@ public class Act1_apalacios {
                 System.out.println("¿Cuantos participantes hay?");
                 cantidadParticipantes = sc.nextInt();
                 System.out.print("\n");
-                state = false;
                 
             } catch (InputMismatchException excep) {
                 System.out.println("\n-------------------------------------");
                 System.out.println("Error, solo puedes introducir números");
                 System.out.println("-------------------------------------\n");
 
+            }
+
+            if(cantidadParticipantes < 3){
+                System.out.println("\n\nERROR, introduce mínimo 3 participantes para hacer el podiumn\n");
+            }
+
+            else{
+                state = false;
             }
         }
         

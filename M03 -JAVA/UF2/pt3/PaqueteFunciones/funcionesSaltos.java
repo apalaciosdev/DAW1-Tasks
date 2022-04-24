@@ -102,7 +102,6 @@ public class funcionesSaltos {
             }
 
             Arrays.sort(saltosParticipante); //Ordenamos todos los resultados de cada participante
-    
             mejoresSaltosIndividuales[i] = saltosParticipante[2]; //salto máximo
             peoresSaltosIndividuales[i] = saltosParticipante[0]; //salto mínimo
         }
@@ -120,41 +119,39 @@ public class funcionesSaltos {
         boolean checkedSecond = false;
         boolean checkedThird = false;
 
-        for (float f : podiumMejoresSaltos) {
+        System.out.println("--------");
+        for (float f : mejoresSaltosIndividuales) {
             System.out.println(f);
         }
+        System.out.println("--------");
 
         while (podiumState) {
             podiumCont ++;
             System.out.println("vuelta " + podiumCont);
+
+            System.out.println("nose" + mejoresSaltosIndividuales[podiumCont]);
             if(mejoresSaltosIndividuales[podiumCont] == podiumMejoresSaltos[podiumMejoresSaltos.length-1] && checkedFirst == false){
-                if(podiumMejoresSaltos[podiumMejoresSaltos.length-1] != 0){
-                    System.out.println("Jugador " + arrayParticipantes[podiumCont] + " -> " + podiumMejoresSaltos[podiumMejoresSaltos.length-1]);
-                    System.out.println("primero\n");
-                    primerPuesto = podiumCont;
-                    podiumCont = -1;
-                    checkedFirst = true;
-                }
+                System.out.println("Jugador " + arrayParticipantes[podiumCont] + " -> " + podiumMejoresSaltos[podiumMejoresSaltos.length-1]);
+                System.out.println("primero\n");
+                primerPuesto = podiumCont;
+                podiumCont = -1;
+                checkedFirst = true;
             }
             
             else if(mejoresSaltosIndividuales[podiumCont] == podiumMejoresSaltos[podiumMejoresSaltos.length-2] && checkedSecond == false){
-                if(podiumMejoresSaltos[podiumMejoresSaltos.length-2] != 0){
-                    System.out.println("Jugador " + arrayParticipantes[podiumCont] + " -> " + podiumMejoresSaltos[podiumMejoresSaltos.length-2]);
-                    System.out.println("segundo\n");
-                    segundoPuesto = podiumCont;
-                    podiumCont = -1;
-                    checkedSecond = true;
-                }
+                System.out.println("Jugador " + arrayParticipantes[podiumCont] + " -> " + podiumMejoresSaltos[podiumMejoresSaltos.length-2]);
+                System.out.println("segundo\n");
+                segundoPuesto = podiumCont;
+                podiumCont = -1;
+                checkedSecond = true;
             }
             
             else if(mejoresSaltosIndividuales[podiumCont] == podiumMejoresSaltos[podiumMejoresSaltos.length-3] && checkedThird == false){
-                if(podiumMejoresSaltos[podiumMejoresSaltos.length-1] != 3){
-                    System.out.println("Jugador " + arrayParticipantes[podiumCont] + " -> " + podiumMejoresSaltos[podiumMejoresSaltos.length-3]);
-                    System.out.println("tercero\n");
-                    tercerPuesto = podiumCont;
-                    podiumCont = -1;
-                    checkedThird = true;
-                }
+                System.out.println("Jugador " + arrayParticipantes[podiumCont] + " -> " + podiumMejoresSaltos[podiumMejoresSaltos.length-3]);
+                System.out.println("tercero\n");
+                tercerPuesto = podiumCont;
+                podiumCont = -1;
+                checkedThird = true;
             }
 
             // if(podiumMejoresSaltos[0] == mejoresSaltosIndividuales[podiumCont]){
