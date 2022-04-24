@@ -55,10 +55,11 @@ public class Act1_apalacios {
 
         float arraySaltos[][] = hacerSaltos(numeroParticipantes, arrayParticipantes, opcionSalto);
         
-       
-
-
-        // float sis = funcionSalto.crearRandom(1);
+        // max y min de cada participante
+        //puntuajesIndividuales
+        funcionSalto.puntuajesIndividuales(arraySaltos, arrayParticipantes, numeroParticipantes);
+        
+        funcionSalto.printAllResults(arraySaltos, arrayParticipantes, numeroParticipantes);
         // System.out.println(sis);
     }
 
@@ -109,7 +110,10 @@ public class Act1_apalacios {
         float validOrNot = 0;
         
         for (int i = 0; i < numeroParticipantes; i++) {
-            System.out.println("\n\nTurno del participante " + (i+1));
+            System.out.println("\n\n------------------------");
+            System.out.println("Turno del participante " + (i+1));
+            System.out.println("------------------------\n");
+            
             for (int j = 0; j < 3; j++) {
                 // Salto válido o no válido
                 validOrNot = funcionSalto.crearRandom(4);
@@ -117,9 +121,8 @@ public class Act1_apalacios {
                 if(validOrNot == 1){ //Si el salto es válido
                     
                     // Primer participante
-                    while (statePrimerPart) {
-
-                        if(i == 0){
+                    if(i == 0){
+                        while (statePrimerPart) {
                             while (statePrimerPart2) {
                                 try {
                                     Scanner sc = new Scanner(System.in);
@@ -135,26 +138,35 @@ public class Act1_apalacios {
                     
                                 }
                             }
+                           
+        
+                            String validarSalto = funcionSalto.checkIsValid(opcionSalto, saltoParticipante);
+                            
+                            if(validarSalto.equals("ok")){
+                                statePrimerPart = false;
+                            }
+        
+                            else{
+                                System.out.println(validarSalto + "\n\n");
+                                statePrimerPart2 = true;
+                            }
                         }
-    
-                        String validarSalto = funcionSalto.checkIsValid(opcionSalto, saltoParticipante);
-                        
-                        if(validarSalto.equals("ok")){
-                            statePrimerPart = false;
-                        }
-    
-                        else{
-                            System.out.println(validarSalto + "\n\n");
-                            statePrimerPart2 = true;
-                        }
+
+                        saltosParticipantes[i][j] = saltoParticipante;
+
+                        statePrimerPart = true;
+                        statePrimerPart2 = true;
                     }
-     
 
                     // Resto de participantes
+                    else{
+                        saltosParticipantes[i][j] = funcionSalto.crearRandom(opcionSalto);
+                    }
                 }
 
                 else{ //Si el salto no es válido
-                    System.out.println("\nSalto " + (i+1) + "no válido \n");
+                    System.out.println("\nSalto no válido \n");
+                    saltosParticipantes[i][j] = 0;
                 }
 
 
