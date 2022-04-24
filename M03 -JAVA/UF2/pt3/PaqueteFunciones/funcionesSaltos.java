@@ -1,5 +1,6 @@
 package PaqueteFunciones;
 
+import java.lang.invoke.VarHandle;
 import java.util.Arrays;
 
 public class funcionesSaltos {
@@ -86,16 +87,8 @@ public class funcionesSaltos {
         float saltosParticipante[] = new float[3];
         float mejoresSaltosIndividuales[] = new float[numeroParticipantes];
         float peoresSaltosIndividuales[] = new float[numeroParticipantes];
-        float podiumMejoresSaltos[] = new float[numeroParticipantes];
-        float podiumPeoresSaltos[] = new float[numeroParticipantes];
+        float medianaMejoresSaltos = 0;
 
-        int primerPuesto = 0;
-        int segundoPuesto = 0;
-        int tercerPuesto = 0;
-        int peorPuesto = 0;
-        
-        System.out.println("\n\n---------Mejores saltos individuales---------");
-        
         for (int i = 0; i < numeroParticipantes; i++) {
             for (int j = 0; j < 3; j++) { //Guardamos los 3 saltos jugador por jugador
                 saltosParticipante[j] = arraySaltos[i][j];
@@ -104,106 +97,100 @@ public class funcionesSaltos {
             Arrays.sort(saltosParticipante); //Ordenamos todos los resultados de cada participante
             mejoresSaltosIndividuales[i] = saltosParticipante[2]; //salto máximo
             peoresSaltosIndividuales[i] = saltosParticipante[0]; //salto mínimo
+
+            medianaMejoresSaltos = medianaMejoresSaltos + saltosParticipante[2]; //salto máximo
+
         }
 
-        podiumMejoresSaltos = mejoresSaltosIndividuales; podiumPeoresSaltos = peoresSaltosIndividuales;
 
-        Arrays.sort(podiumMejoresSaltos); //Ordenamos todos los resultados de cada participante
-        Arrays.sort(podiumPeoresSaltos); //Ordenamos todos los resultados de cada participante
+        //Copiamos la array de mejores saltos individuales y ordenamos los saltos en la nueva
+        float[] podiumMejoresSaltos = new float[numeroParticipantes];
+        float[] podiumPeoresSaltos = new float[numeroParticipantes];
+        for (int i = 0; i < numeroParticipantes; i++) {
+            podiumMejoresSaltos[i] = mejoresSaltosIndividuales[i];
+            podiumPeoresSaltos[i] = peoresSaltosIndividuales[i];
+        }
+        Arrays.sort(podiumMejoresSaltos);
+        Arrays.sort(podiumPeoresSaltos);
 
-        boolean podiumState = true;
-        int podiumCont = -1;
-        int doneTasks = 0;
 
-        boolean checkedFirst = false;
-        boolean checkedSecond = false;
-        boolean checkedThird = false;
+        float primeroPuntuacion = podiumMejoresSaltos[podiumMejoresSaltos.length-1];
+        float peorPuntuacion = podiumPeoresSaltos[0];
 
-        System.out.println("--------");
-        for (float f : mejoresSaltosIndividuales) {
+        int posicionPrimero = 0; int posicionPeor = 0;
+        
+        for (int i = 0; i < numeroParticipantes; i++) {
+            if(mejoresSaltosIndividuales[i] == primeroPuntuacion){
+                posicionPrimero = i;
+            }
+
+            if(peoresSaltosIndividuales[i] == peorPuntuacion){
+                posicionPeor = i;
+            }
+        }
+
+
+        System.out.println("\n(Peor Salto) " + arrayParticipantes[posicionPeor] + " -> " + peorPuntuacion);
+        System.out.println("(Mejor Salto) " + arrayParticipantes[posicionPrimero] + " -> " + primeroPuntuacion);
+        System.out.println("(Mediana Mejores Saltos) -> " + (medianaMejoresSaltos/numeroParticipantes));
+       
+     
+    }
+
+
+
+    public static void podium(float[][] arraySaltos, String[] arrayParticipantes, int numeroParticipantes){
+        float sumaParticipante = 0;
+        float[] arraySumaPartipantes = new float[numeroParticipantes];
+
+        for (int i = 0; i < numeroParticipantes; i++) {
+            for (int j = 0; j < 3; j++) {
+                sumaParticipante = sumaParticipante + arraySaltos[i][j];
+            }
+            arraySumaPartipantes[i] = sumaParticipante;
+            sumaParticipante = 0;
+        }
+
+
+        //Copiamos la array de la suma de puntos y ordenamos los saltos en la nueva
+        float[] marcajeOrdenado = new float[numeroParticipantes];
+        for (int i = 0; i < numeroParticipantes; i++) {
+            marcajeOrdenado[i] = arraySumaPartipantes[i];
+        }
+        Arrays.sort(marcajeOrdenado);
+
+
+        float primeroPuntuacion = marcajeOrdenado[marcajeOrdenado.length-1];
+        float segundoPuntuacion = marcajeOrdenado[marcajeOrdenado.length-2];
+        float terceroPuntuacion = marcajeOrdenado[marcajeOrdenado.length-3];
+
+
+        int posicionPrimero = 0; int posicionSegundo = 0; int posicionTercero = 0;
+        
+        for (int i = 0; i < numeroParticipantes; i++) {
+            if(arraySumaPartipantes[i] == primeroPuntuacion){
+                posicionPrimero = i;
+            }
+
+            if(arraySumaPartipantes[i] == segundoPuntuacion){
+                posicionSegundo = i;
+            }
+
+            if(arraySumaPartipantes[i] == terceroPuntuacion){
+                posicionTercero = i;
+            }
+
+            
+        }
+
+        System.out.println("\n\n-------PODIUM-------");
+        System.out.println("\n1.- " + arrayParticipantes[posicionPrimero] + " -> " + primeroPuntuacion);
+        System.out.println("\n2.- " + arrayParticipantes[posicionSegundo] + " -> " + segundoPuntuacion);
+        System.out.println("\n3.- " + arrayParticipantes[posicionTercero] + " -> " + terceroPuntuacion);
+    
+        for (float f : arraySumaPartipantes) {
             System.out.println(f);
         }
-        System.out.println("--------");
-
-        while (podiumState) {
-            podiumCont ++;
-            System.out.println("vuelta " + podiumCont);
-
-            System.out.println("nose" + mejoresSaltosIndividuales[podiumCont]);
-            if(mejoresSaltosIndividuales[podiumCont] == podiumMejoresSaltos[podiumMejoresSaltos.length-1] && checkedFirst == false){
-                System.out.println("Jugador " + arrayParticipantes[podiumCont] + " -> " + podiumMejoresSaltos[podiumMejoresSaltos.length-1]);
-                System.out.println("primero\n");
-                primerPuesto = podiumCont;
-                podiumCont = -1;
-                checkedFirst = true;
-            }
-            
-            else if(mejoresSaltosIndividuales[podiumCont] == podiumMejoresSaltos[podiumMejoresSaltos.length-2] && checkedSecond == false){
-                System.out.println("Jugador " + arrayParticipantes[podiumCont] + " -> " + podiumMejoresSaltos[podiumMejoresSaltos.length-2]);
-                System.out.println("segundo\n");
-                segundoPuesto = podiumCont;
-                podiumCont = -1;
-                checkedSecond = true;
-            }
-            
-            else if(mejoresSaltosIndividuales[podiumCont] == podiumMejoresSaltos[podiumMejoresSaltos.length-3] && checkedThird == false){
-                System.out.println("Jugador " + arrayParticipantes[podiumCont] + " -> " + podiumMejoresSaltos[podiumMejoresSaltos.length-3]);
-                System.out.println("tercero\n");
-                tercerPuesto = podiumCont;
-                podiumCont = -1;
-                checkedThird = true;
-            }
-
-            // if(podiumMejoresSaltos[0] == mejoresSaltosIndividuales[podiumCont]){
-            //     peorPuesto = podiumCont;
-            //     podiumCont = -1;
-            //     doneTasks ++;
-            // }
-
-            if(checkedFirst == true && checkedSecond == true && checkedThird == true){
-                podiumState = false;
-            }
-
-        }
-        /*
-        for (int i = 0; i < numeroParticipantes; i++) {
-            if(podiumMejoresSaltos[podiumMejoresSaltos.length-1] == mejoresSaltosIndividuales[i]){
-                primerPuesto = i;
-            }
-            
-            else if(podiumMejoresSaltos[podiumMejoresSaltos.length-2] == mejoresSaltosIndividuales[i]){
-                segundoPuesto = i;
-            }
-
-            else if(podiumMejoresSaltos[podiumMejoresSaltos.length-3] == mejoresSaltosIndividuales[i]){
-                tercerPuesto = i;
-            }
-
-            else if(podiumMejoresSaltos[podiumMejoresSaltos.length-0] == mejoresSaltosIndividuales[i]){
-                peorPuesto = i;
-            }
-        }
-        */
-
-        System.out.println("\n\n\n=========PODIUM=========");
-     
-    
-        System.out.println("1.- " + arrayParticipantes[primerPuesto] + " -> " + podiumMejoresSaltos[primerPuesto] + " metros");
-        System.out.println("2.- " + arrayParticipantes[segundoPuesto] + " -> " + podiumMejoresSaltos[segundoPuesto] + " metros");
-        System.out.println("3.- " + arrayParticipantes[tercerPuesto] + " -> " + podiumMejoresSaltos[tercerPuesto] + " metros");
-        
- 
-        System.out.println(podiumMejoresSaltos[podiumMejoresSaltos.length-1]);
-        System.out.println(podiumMejoresSaltos[podiumMejoresSaltos.length-2]);
-        System.out.println(podiumMejoresSaltos[podiumMejoresSaltos.length-3]);
-        
-        // System.err.println("peores");
-        // System.out.println("mejores");
-
-
-        // //saber en que posicion de la antigua array estaba
-
-        // System.out.println("\n\n-----Mejor salto-----");
     }
 
 }

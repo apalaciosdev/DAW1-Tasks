@@ -59,6 +59,9 @@ public class Act1_apalacios {
         //puntuajesIndividuales
         funcionSalto.puntuajesIndividuales(arraySaltos, arrayParticipantes, numeroParticipantes);
         
+        //podium
+        funcionSalto.podium(arraySaltos, arrayParticipantes, numeroParticipantes);
+        
         funcionSalto.printAllResults(arraySaltos, arrayParticipantes, numeroParticipantes);
         // System.out.println(sis);
     }
