@@ -76,7 +76,7 @@ public class funcionesSaltos {
         for (int i = 0; i < numeroParticipantes; i++) {
             System.out.println("\nParticipante " + (i+1) + " llamado " + arrayParticipantes[i]);
             for (int j = 0; j < 3; j++) {
-                System.out.println("Salto " + (i+j) + ": " + arraySaltos[i][j]);
+                System.out.println("Salto " + (j+1) + ": " + arraySaltos[i][j]);
             }
         }
     }
@@ -113,28 +113,44 @@ public class funcionesSaltos {
         Arrays.sort(podiumMejoresSaltos);
         Arrays.sort(podiumPeoresSaltos);
 
-
+   
         float primeroPuntuacion = podiumMejoresSaltos[podiumMejoresSaltos.length-1];
+        float segundoPuntuacion = podiumMejoresSaltos[podiumMejoresSaltos.length-2];
+        float terceroPuntuacion = podiumMejoresSaltos[podiumMejoresSaltos.length-3];
         float peorPuntuacion = podiumPeoresSaltos[0];
 
-        int posicionPrimero = 0; int posicionPeor = 0;
+        int posicionPeor = 0;
+        int posicionPrimero = 0; int posicionSegundo = 0; int posicionTercero = 0;
         
         for (int i = 0; i < numeroParticipantes; i++) {
             if(mejoresSaltosIndividuales[i] == primeroPuntuacion){
                 posicionPrimero = i;
             }
 
+            if(mejoresSaltosIndividuales[i] == segundoPuntuacion){
+                posicionSegundo = i;
+            }
+    
+            if(mejoresSaltosIndividuales[i] == terceroPuntuacion){
+                posicionTercero = i;
+            }
+            
             if(peoresSaltosIndividuales[i] == peorPuntuacion){
                 posicionPeor = i;
             }
         }
 
 
+        System.out.println("\n\n\n\n-------PODIUM-------");
+        System.out.println("\n1.- " + arrayParticipantes[posicionPrimero] + " -> " + primeroPuntuacion);
+        System.out.println("\n2.- " + arrayParticipantes[posicionSegundo] + " -> " + segundoPuntuacion);
+        System.out.println("\n3.- " + arrayParticipantes[posicionTercero] + " -> " + terceroPuntuacion);
+        
+
         System.out.println("\n(Peor Salto) " + arrayParticipantes[posicionPeor] + " -> " + peorPuntuacion);
         System.out.println("(Mejor Salto) " + arrayParticipantes[posicionPrimero] + " -> " + primeroPuntuacion);
         System.out.println("(Mediana Mejores Saltos) -> " + (medianaMejoresSaltos/numeroParticipantes));
        
-     
     }
 
 
@@ -183,14 +199,10 @@ public class funcionesSaltos {
             
         }
 
-        System.out.println("\n\n-------PODIUM-------");
+        System.out.println("\n\n\n\n-------PODIUM-------");
         System.out.println("\n1.- " + arrayParticipantes[posicionPrimero] + " -> " + primeroPuntuacion);
         System.out.println("\n2.- " + arrayParticipantes[posicionSegundo] + " -> " + segundoPuntuacion);
         System.out.println("\n3.- " + arrayParticipantes[posicionTercero] + " -> " + terceroPuntuacion);
-    
-        for (float f : arraySumaPartipantes) {
-            System.out.println(f);
-        }
     }
 
 }

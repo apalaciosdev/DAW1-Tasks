@@ -55,15 +55,14 @@ public class Act1_apalacios {
 
         float arraySaltos[][] = hacerSaltos(numeroParticipantes, arrayParticipantes, opcionSalto);
         
-        // max y min de cada participante
-        //puntuajesIndividuales
-        funcionSalto.puntuajesIndividuales(arraySaltos, arrayParticipantes, numeroParticipantes);
+        //printar todos los saltos para comprobar
+        funcionSalto.printAllResults(arraySaltos, arrayParticipantes, numeroParticipantes);
         
         //podium
-        funcionSalto.podium(arraySaltos, arrayParticipantes, numeroParticipantes);
-        
-        funcionSalto.printAllResults(arraySaltos, arrayParticipantes, numeroParticipantes);
-        // System.out.println(sis);
+        // funcionSalto.podium(arraySaltos, arrayParticipantes, numeroParticipantes);
+
+        //puntuajesIndividuales
+        funcionSalto.puntuajesIndividuales(arraySaltos, arrayParticipantes, numeroParticipantes);
     }
 
 
