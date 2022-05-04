@@ -25,14 +25,17 @@ public class ActFicheros_apalacios {
 
       if(num == 1){
         eliminarFicheros(lista);
+        countFilesAndDirectories(lista);
       }
       
       else if(num == 2){
         eliminarCarpetas(lista);
+        countFilesAndDirectories(lista);
       }
-
+      
       else if(num == 3){
-        eliminarAmbos(lista);
+        eliminarCarpetas(lista);
+        countFilesAndDirectories(lista);
       }
     
       else if (num == 4) {
@@ -57,7 +60,6 @@ public class ActFicheros_apalacios {
         lista[i].delete();
       }
     }
-    countFilesAndDirectories(lista);
   }
 
 
@@ -74,22 +76,7 @@ public class ActFicheros_apalacios {
 
       }
     }
-    countFilesAndDirectories(lista);
   }
-
-
-  public static void eliminarAmbos(File[] lista){
-    for (int i = 0; i < lista.length; i++) {
-      if (lista[i].isDirectory()) {
-        lista[i].delete();
-      }
-      if (lista[i].isFile()) {
-        lista[i].delete();
-      }
-    }
-    countFilesAndDirectories(lista);
-  }
-
 
 
   public static void countFilesAndDirectories(File[] lista) {
